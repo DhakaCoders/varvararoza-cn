@@ -1,0 +1,26 @@
+@media (max-width: 700px) {
+  .slider-bottom {
+    width: 100px;
+  }
+  section.homepage
+    .homepage__home-slider
+    .slick-track
+    .slick-slide
+    .container-fluid
+    .slider-pos-center {
+    top: 25%;
+  }
+}
+
+@media (max-width: 600px) {
+  section.homepage
+    .homepage__home-slider
+    .slick-track
+    .slick-slide
+    .container-fluid
+    .slider-main-contents.slider-pos-bottom
+    h2 {
+    font-size: 38px;
+    line-height: 40px;
+  }
+}

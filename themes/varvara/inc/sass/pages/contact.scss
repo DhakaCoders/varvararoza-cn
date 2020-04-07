@@ -1,0 +1,149 @@
+div.content-wrap.contact-wrap {
+	position: relative;
+
+	section.contact-main {
+		position: relative;
+
+		.container-fluid {
+			max-width: 1060px;
+			padding-top: 150px;
+			padding-bottom: 100px;
+			@media all and (max-width: 767px) {
+				padding-top: 20px;
+				padding-bottom: 0;
+			}
+		}
+
+
+
+
+		.text-col {
+			padding-top: 30px;
+			.text-wrap {
+				margin-bottom: 75px;
+				padding-right: 50px;
+				@media all and (max-width: 767px) {
+					margin-bottom: 0;
+					padding-right: 0;
+				}
+				p {
+					font-size: 14px;
+					line-height: 26px;
+				}
+			}
+
+			.social-wrap {
+				margin-bottom: 30px;
+			}
+
+			.instagram-link {
+				img {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.contact-col {
+
+			::-webkit-input-placeholder {
+				color: #d8d8d8;
+			}
+
+			:-moz-placeholder {
+				/* Mozilla Firefox 4 to 18 */
+				color: #d8d8d8;
+				opacity: 1;
+			}
+
+			::-moz-placeholder {
+				/* Mozilla Firefox 19+ */
+				color: #d8d8d8;
+				opacity: 1;
+			}
+
+			:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
+				color: #d8d8d8;
+			}
+
+			::-ms-input-placeholder {
+				/* Microsoft Edge */
+				color: #d8d8d8;
+			}
+
+			::placeholder {
+				/* Most modern browsers support this now. */
+				color: #d8d8d8;
+			}
+
+			.contact-form-wrap {
+				background: #F1F1F1;
+				border-top: 3px solid #959595;
+				padding: 40px 70px;
+				padding-bottom: 20px;
+				@media all and (max-width: 767px) {
+					padding-left: 35px;
+					padding-right: 35px;
+				}
+				label {
+					font-size: 14px;
+					line-height: 26px;
+					width: 100%;
+				}
+
+				input,
+				textarea {
+					width: 100%;
+					background: none;
+					-webkit-appearance: none;
+					border: none;
+					font-size: 14px;
+					line-height: 26px;
+					border-bottom: 1px solid #d8d8d8;
+					height: 29px;
+				}
+
+				textarea {
+					resize: none;
+					height: 131px;
+					padding-top: 108px;
+					overflow: hidden;
+					&.focused {
+						padding-top: 0;
+						overflow: auto;
+					}
+				}
+
+				input[type='submit'] {
+					box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.16);
+					border-radius: 5px;
+					background: black;
+					color: white !important;
+					font-size: 13px;
+					text-align: center;
+					display: block;
+					width: 100%;
+					padding: 15px;
+					height: auto;
+				}
+			}
+		}
+
+		.bg-overlay {
+			opacity: 0.05;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+
+			img {
+				height: 100%;
+			}
+
+			left: 0;
+			@media all and (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+
+}

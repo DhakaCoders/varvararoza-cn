@@ -1,0 +1,27 @@
+
+<svg width="41px" height="35px" viewBox="0 0 41 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <defs>
+
+        <filter x="-20.6%" y="-38.5%" width="141.2%" height="207.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-page" transform="translate(-933.000000, -871.000000)" fill="#FFFFFF">
+            <g id="Group-3" transform="translate(583.000000, 825.000000)">
+                <g id="Rollover-details" transform="translate(354.000000, 46.000000)">
+                    <g id="Details" fill-opacity="1">
+                        <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                        <use xlink:href="#text-1"></use>
+                    </g>
+                    <g id="right-arrow" transform="translate(1.000000, 0.000000)" fill-rule="nonzero">
+                        <path d="M29.801715,7.02172682 L29.801715,7.02172682 L22.9836919,0.237162535 C22.7387744,-0.0474225449 22.3083524,-0.0805979005 22.0223614,0.163173913 C21.7363704,0.406887421 21.7030312,0.835193505 21.9480073,1.11977859 C21.9708584,1.14630721 21.9957017,1.17108669 22.0223614,1.19376721 L27.6745068,6.82494856 L0.681784724,6.82494856 C0.305267997,6.82494856 0,7.12871588 0,7.50343998 C0,7.87816407 0.305267997,8.18187308 0.681784724,8.18187308 L27.6745068,8.18187308 L22.0223614,13.8062328 C21.7363704,14.0499463 21.7030312,14.4782524 21.9480073,14.7628375 C22.1929834,15.0474225 22.6233468,15.0805979 22.9093378,14.8368261 C22.9359975,14.8140873 22.9608994,14.7893661 22.9836919,14.7628375 L29.8017736,7.97827318 C30.0660852,7.71374491 30.0660852,7.2863717 29.801715,7.02172682 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,96 @@
+/* ==========================================================================
+
+Theme Name: Varvara Roza Galleries
+Theme URI: 
+Author: The PHA Group
+Description: Varvara Roza Galleries theme.
+Version: 1.0
+   
+   1. Reset
+   2. Base styles: opinionated defaults
+   3. Variables
+   4. Mixins
+   5. Fonts
+   6. Custom styles
+   7. Browser Fixes
+   8. Responsive
+   
+   */
+
+   
+/* ==========================================================================
+   0. Bootstrap
+   ========================================================================== */
+
+@import "inc/sass/bootstrap/functions"; 
+@import "inc/sass/bootstrap/variables";
+@import "inc/sass/bootstrap/bootstrap";
+@import "inc/sass/slick";
+@import "inc/sass/slick-theme";
+@import "inc/sass/aos/aos";
+
+
+/* ==========================================================================
+   1. Reset
+   ========================================================================== */
+   
+@import "inc/sass/normalize";
+
+/* ==========================================================================
+   2. Base Styles
+   ========================================================================== */
+   
+@import "inc/sass/base";
+ 
+/* ==========================================================================
+   3. Variables
+   ========================================================================== */
+
+@import "inc/sass/variables";
+   
+/* ==========================================================================
+   4. Mixins
+   ========================================================================== */
+
+@import "inc/sass/mixins";
+
+/* ==========================================================================
+   5. Fonts
+   ========================================================================== */
+
+@import "inc/sass/fonts";
+
+/* ==========================================================================
+   6. Custom Styles
+   ========================================================================== */
+
+@import "inc/sass/general-styles";
+
+// Elements
+
+@import "inc/sass/elements/header";
+@import "inc/sass/elements/footer";
+@import "inc/sass/elements/exhibitions";
+@import "inc/sass/elements/page-title";
+
+// Pages
+
+@import "inc/sass/pages/homepage";
+@import "inc/sass/pages/exhibition-single";
+@import "inc/sass/pages/exhibition-archive";
+@import "inc/sass/pages/about";
+@import "inc/sass/pages/contact";
+@import "inc/sass/pages/news";
+@import "inc/sass/pages/gallery";
+
+/* ==========================================================================
+   7. Browser Fixes
+   ========================================================================== */
+
+@import "inc/sass/browsers";
+
+/* ==========================================================================
+   8. Responsive
+   ========================================================================== */
+
+@import "inc/sass/responsive";

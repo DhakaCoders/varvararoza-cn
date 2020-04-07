@@ -1,0 +1,4 @@
+wp-config.php
+.htpasswd
+wp-content/uploads/
+node_modules/

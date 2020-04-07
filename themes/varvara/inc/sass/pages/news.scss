@@ -1,0 +1,144 @@
+.content-wrap.news-archive-page {
+	padding-bottom: 50px;
+}
+
+section.news-posts {
+	.container-fluid {
+		max-width: 1393px;
+		margin: auto;
+
+		.news-col {
+			display: block;
+			margin-bottom: 50px;
+			//text-align: center;
+
+			.text-wrap {
+				padding-top: 30px;
+				//padding-left: 10px;
+				//padding-right: 10px;
+
+				.readmore {
+					svg {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+section.news-pagination {
+	.container-fluid {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.pagination-wrap {
+			display: flex;
+			flex-direction: row;
+
+			.page-numbers {
+				min-width: 38px;
+				min-height: 39px;
+				border: 1px solid #dddddd;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&.current {
+					border: 1px solid black;
+					background: black;
+					color: white;
+				}
+
+				&.next,
+				&.prev {
+					position: relative;
+
+					&:before {
+						content: "";
+						width: 9px;
+						height: 14px;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+					}
+				}
+
+				&.next {
+					&:before {
+						background-image: url('img/paginate-right.svg');
+						background-size: 9px 14px;
+						background-position: 50% 50%;
+						background-repeat: no-repeat;
+					}
+				}
+
+				&.prev {
+					&:before {
+						background: url('img/paginate-left.svg');
+						background-size: 9px 14px;
+						background-position: 50% 50%;
+						background-repeat: no-repeat;
+					}
+				}
+			}
+		}
+	}
+}
+
+section.news-contents {
+	.container-fluid {
+		max-width: 1150px;
+	}
+
+	.image-share-col {
+		@media all and (max-width: 767px) {
+			text-align: center;
+
+			span {
+				display: none;
+			}
+		}
+
+		.share-links {
+			padding-left: 15px;
+			padding-top: 30px;
+
+			@media all and (max-width: 767px) {
+				padding-bottom: 20px;
+				.the-share-links {
+					display: flex;
+					justify-content: center;
+				}
+			}
+
+			p {
+				font-size: 11px;
+				line-height: 14px;
+				margin-bottom: 8px;
+			}
+
+			svg {
+				margin-right: 8px;
+			}
+		}
+	}
+
+	.text-col {
+		.the-details {
+			margin-bottom: 10px;
+		}
+
+		.the-content {
+			margin-bottom: 75px;
+			@media all and (max-width: 767px) {
+				p {
+				font-size: 14px;
+				line-height: 24px;
+				}
+			}
+		}
+	}
+}

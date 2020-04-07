@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="229px" height="241px" viewBox="0 0 229 241" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>VRG-V-Black</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="8.20447545e-05 0.036260162 151.478082 0.036260162 151.478082 240.493353 8.20447545e-05 240.493353"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo-/-Normal-Mark-Black">
+            <g id="VRG-V-Black">
+                <g id="Group-36">
+                    <polygon id="Fill-1" fill="#1D1D1B" points="202.760828 60 229 0.00286549568 177 0"></polygon>
+                    <g id="Group-35">
+                        <g id="Group-4">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-3"></g>
+                            <path d="M87.105357,27.2174307 C86.8196362,25.687129 86.6867237,24.0240782 86.6867237,22.218445 C86.6867237,13.357035 98.7282272,10.2128488 107.456558,9.09779757 C110.108655,8.86876445 113.057549,8.66451936 116.308572,8.48526715 L116.308572,0.036239676 L8.20447545e-05,0.036239676 L8.20447545e-05,8.48526715 C8.01195744,9.15987005 13.9113855,11.3365041 17.6893413,14.9955027 C21.4765272,18.6639248 25.1683361,24.6702056 28.7846637,33.0051262 L118.002181,240.493353 L125.243246,240.493353 L151.478082,179.754304 L88.7134342,32.2162116 C87.9235483,30.4105784 87.3906677,28.7475276 87.105357,27.2174307" id="Fill-2" fill="#1D1D1B" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

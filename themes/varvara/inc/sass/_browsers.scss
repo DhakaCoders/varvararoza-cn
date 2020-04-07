@@ -1,0 +1,53 @@
+@media all and (-ms-high-contrast:none) {
+section.gallery-section .grid .grid-item {
+	transition: none!important;
+	opacity: 1!important;
+}
+
+}
+
+/* ios */
+
+@supports (-webkit-overflow-scrolling: touch) {
+
+	section.homepage {
+		height: 97.5vh;
+
+		.homepage__home-slider {
+			height: 97.5vh;
+
+
+
+			.slick-list {
+				height: 97.5vh;
+			}
+
+			.slick-track {
+				position: relative;
+
+				.slick-slide {
+					height: 97.5vh;
+
+
+					.container-fluid {
+						height: 97.5vh;
+
+
+
+					}
+				}
+			}
+		}
+	}
+
+}
+
+/* ie9 */
+.canvas.no-websockets {}
+
+/* ie8  */
+.hashchange.no-canvas,
+.no-hashchange {}
+
+/* ie7 */
+.no-hashchange {}
