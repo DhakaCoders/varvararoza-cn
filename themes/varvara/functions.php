@@ -32,6 +32,7 @@ function cbv_theme_scripts(){
 
 add_action( 'wp_enqueue_scripts', 'cbv_theme_scripts');
 include_once( DIR . '/inc/wc-functions.php' );
+include_once( DIR . '/inc/cbv-functions.php' );
 /*
 General Functions
 - basic theme functions

@@ -8,3 +8,13 @@
 
 2020-04-09T04:42:07+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\wc-functions.php on line 49
 
+2020-04-09T06:53:20+00:00 CRITICAL Uncaught Error: Call to undefined function cbv_get_image_tag() in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\wc-functions.php:66
+Stack trace:
+#0 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\class-wp-hook.php(288): add_shorttext_below_title_loop('')
+#1 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters('', Array)
+#2 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\woocommerce\content-product.php(49): do_action('woocommerce_sho...')
+#4 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\template.php(724): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\plugins\woocommerce\includes\wc-core-functions.php(197): load_template('C:\\xampp\\htdocs...', false)
+#6 C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\woocommerce\a in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\wc-functions.php on line 66
+

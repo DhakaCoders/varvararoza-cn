@@ -29,6 +29,8 @@ get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
 ?>
+<div class="content-wrap">
+<div class="container-fluid">
 <header class="woocommerce-products-header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
@@ -44,6 +46,7 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
 </header>
+<?php echo do_shortcode('[searchandfilter id="product_filter"]'); ?>
 <?php
 if ( woocommerce_product_loop() ) {
 
@@ -101,5 +104,8 @@ do_action( 'woocommerce_after_main_content' );
  * @hooked woocommerce_get_sidebar - 10
  */
 do_action( 'woocommerce_sidebar' );
-
+?>
+</div>
+</div>
+<?php
 get_footer( 'shop' );
