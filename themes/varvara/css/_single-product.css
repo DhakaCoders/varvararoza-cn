@@ -1,0 +1,22 @@
+.thumbnail-items {
+    float: left;
+    width: 18%;
+    padding-right: 2%;
+}
+
+.product-gallery-img {
+    width: 70%;
+    float: left;
+}
+
+.thumbnail-item {
+    margin-bottom: 10px;
+}
+
+body .woocommerce-product-gallery {
+    width: 60% !important;
+}
+
+.summary.entry-summary {
+    width: 40% !important;
+}

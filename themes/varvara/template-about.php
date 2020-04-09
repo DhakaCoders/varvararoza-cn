@@ -88,7 +88,6 @@ get_header(); ?>
 				</div>
 			  </div>
 			</section>
-
 			<section class="about-section2"  style="<?php $image = get_field('section2_image'); $size = 'aboutbg'; $thumb = $image['sizes'][ $size ]; if ($image) { ?>background-image: url(<?php echo $thumb;?>); <?php } else { ?> background-color:black <?php } ?>">
 
 				<div class="container-fluid">
