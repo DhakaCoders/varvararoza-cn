@@ -24,10 +24,50 @@ $query = new WP_Query(array(
 	) 
 );
 ?>
-<div class="content-wrap">
-<div class="container-fluid">
-
-</div>
-</div>
+<section class="product-archive">
+	<div class="content-wrap">
+		<div class="container-fluid">
+			<ul class="product-lists clearfix">
+			 <?php 
+			  $product_thumb = '';
+		      while($query->have_posts()): $query->the_post(); 
+		        global $product, $woocommerce, $post;
+		        $thumb_id = get_post_thumbnail_id($product->get_id());
+		        if(!empty($thumb_id)){
+		            $product_thumb = cbv_get_image_tag($thumb_id, 'prodgrid');
+		        }
+		      ?>
+		      <li class="product-list gallery-col">
+		        
+				<div class="product-grid-inr">
+		        <div class="product-grid-img"><a href="<?php echo get_permalink( $product->get_id() ); ?>" class="overlay-link"></a>
+		        <?php echo $product_thumb; ?>
+		        </div>
+		        <div class="product-grid-title">
+		        <h5><a href="<?php echo get_permalink( $product->get_id() ); ?>"><?php echo get_the_title(); ?></a></h5>
+		        </div>
+		        <div class="taxo">
+		        	<span class="taxo1">Oil on Canvas</span>
+		        	<span class="taxo2">Artist name</span>
+		        </div>
+		        <div class="wc-enquire">
+		        	<?php
+					 if ($product->get_price() <= 0){
+		        	?>
+					<a href="#">Enquire</a>
+					<?php }else{ ?>
+						<div class="loop-price">
+				         	<strong class="price-label">Price:</strong><?php echo $product->get_price_html(); ?>
+				        </div>
+					<?php } ?>
+				</div>
+		         
+		        </div>
+		      </li>
+		      <?php endwhile; ?>
+		    </ul>
+		</div>
+	</div>
+</section>
 <?php
 get_footer( 'shop' );

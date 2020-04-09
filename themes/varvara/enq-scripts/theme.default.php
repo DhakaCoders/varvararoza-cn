@@ -5,6 +5,6 @@ Theme specific styles and scripts
 	wp_enqueue_style( $handle, $src, $deps, $ver );
 */ 
 wp_enqueue_style('cbv-main-style', get_template_directory_uri() . '/css/main.css', array(), array(0, 99));
-
+wp_enqueue_script('cbv-custom', get_template_directory_uri() . '/js/cbv-main.js', array('jquery'), '1.0.0', true);
 
 ?>
