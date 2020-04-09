@@ -1,0 +1,10 @@
+2020-04-09T02:34:39+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\Requests\Transport\cURL.php on line 463
+
+2020-04-09T02:34:53+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\Requests\Transport\cURL.php on line 463
+
+2020-04-09T02:39:59+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\Requests\Transport\cURL.php on line 163
+
+2020-04-09T04:41:53+00:00 CRITICAL syntax error, unexpected 'get_the_ID' (T_STRING), expecting ',' or ';' in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\wc-functions.php on line 48
+
+2020-04-09T04:42:07+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\wc-functions.php on line 49
+
