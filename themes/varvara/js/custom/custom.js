@@ -125,21 +125,22 @@ setTimeout( function () {
   		$(this).addClass('focused');
   	});
 
+  	/*
+	--------------------
+	 About Slider
+	--------------------
+	*/
+	if( $('.AboutInterviewSlider').length ){
+	    $('.AboutInterviewSlider').slick({
+	      dots: true,
+	      infinite: false,
+	      arrows: false,
+	      speed: 300,
+	      slidesToShow: 3,
+	      slidesToScroll: 1,
+	    });
+	}
 
-/*
---------------------
- About Slider
---------------------
-*/
-if( $('.AboutInterviewSlider').length ){
-    $('.AboutInterviewSlider').slick({
-      dots: true,
-      infinite: false,
-      arrows: false,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    });
-}
+
 
 });

@@ -98,6 +98,42 @@ get_header(); ?>
 <?php } ?>
 
 
+<section class="ex-upcoming-slider-sec-wrp">
+	<div class="container-fluid">
+	  <div class="row">
+	  	<div class="col-sm-12">
+	  	  <div class="ex-upcoming-slider-wrp">
+	  	  	 <div class="wide-title" data-aos="fade"><div class="line"></div><div class="title">UpCOMING EXHIbitions</div><div class="line"></div></div>
+	  	  	 <div class="ex-upcoming-slider">
+	  	  	 	<div class="ex-upcoming-slide-item">
+	  	  	 	  <div class="ex-upcoming-slide-two-part clearfix">
+	  	  	 	  	<div class="ex-upcoming-slide-two-lft order-2">
+	  	  	 	  	  <div class="ex-upcoming-slide-two-img" style="background-image:url(img/ex-upcoming-slide-two-img.png);">
+	  	  	 	  	  	<!-- <img src="img/ex-upcoming-slide-two-img.png"> -->
+	  	  	 	  	  </div>
+	  	  	 	  	</div>
+	  	  	 	  	<div class="ex-upcoming-slide-two-rgt order-1">
+	  	  	 	  	   <div class="ex-upcoming-slide-two-dsc">
+	  	  	 	  	   	 <span>UPCOMING</span>
+	  	  	 	  	   	 <span>2nd December 2019 - 20th December 2019</span>
+	  	  	 	  	   	 <span>J/M Gallery, 230 Portobelo Road, London, W11 1LJ</span>
+	  	  	 	  	   	 <h2 class="ex-upcoming-slide-two-title">Maria Chatzilampou</h2>
+	  	  	 	  	   	 <a href="#">View displayed artwork</a>
+	  	  	 	  	   	 <div class="ex-upcoming-btn">
+	  	  	 	  	   	 	<a href="#">Ticket Request</a>
+	  	  	 	  	   	 </div>
+	  	  	 	  	   </div>
+	  	  	 	  	</div>
+	  	  	 	  </div>
+	  	  	 	</div>
+	  	  	 </div>
+	  	  </div>
+	  	</div>
+	  </div>
+	</div>
+</section>
+
+
 <?php if ($upcomingexhibitions) { ?>
 
 	<section class="upcoming-exhibitions">
