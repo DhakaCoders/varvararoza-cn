@@ -68,14 +68,25 @@ get_header(); ?>
 				  	   	<div class="about-interview-slide-item">
 				  	   	  <div class="about-interview-slide-dsc">
 				  	   	  	<span>6th november</span>
-				  	   	  	<p>Lorem ipsum title</p>
+				  	   	  	<h3>Lorem ipsum title</h3>
 				  	   	  	<a href="#">READ MORE</a>
 				  	   	  </div>
+				  	   	</div>
+				  	   	<div class="about-interview-slide-item">
 				  	   	  <div class="about-interview-slide-dsc">
 				  	   	  	<span>6th november</span>
-				  	   	  	<p>Lorem ipsum title</p>
+				  	   	  	<h3>Lorem ipsum title</h3>
 				  	   	  	<a href="#">READ MORE</a>
 				  	   	  </div>
+				  	   	</div>
+				  	   	<div class="about-interview-slide-item">
+				  	   	  <div class="about-interview-slide-dsc">
+				  	   	  	<span>6th november</span>
+				  	   	  	<h3>Lorem ipsum title</h3>
+				  	   	  	<a href="#">READ MORE</a>
+				  	   	  </div>
+				  	   	</div>
+				  	   	<div class="about-interview-slide-item">
 				  	   	  <div class="about-interview-slide-dsc">
 				  	   	  	<span>6th november</span>
 				  	   	  	<p>Lorem ipsum title</p>
@@ -83,11 +94,14 @@ get_header(); ?>
 				  	   	  </div>
 				  	   	</div>
 				  	   </div>
+				  	   </div>
 				  	 </div>
 				  </div>
 				</div>
 			  </div>
 			</section>
+
+
 			<section class="about-section2"  style="<?php $image = get_field('section2_image'); $size = 'aboutbg'; $thumb = $image['sizes'][ $size ]; if ($image) { ?>background-image: url(<?php echo $thumb;?>); <?php } else { ?> background-color:black <?php } ?>">
 
 				<div class="container-fluid">

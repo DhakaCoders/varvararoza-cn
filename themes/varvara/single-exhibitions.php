@@ -64,6 +64,8 @@ get_header(); ?>
 
 	</section>
 
+
+
 	<section class="exhibition-content" data-aos="fade-up">
 
 		<div class="container-fluid">
