@@ -102,8 +102,8 @@ get_header(); ?>
 	<div class="container-fluid">
 	  <div class="row">
 	  	<div class="col-sm-12">
+	  	 <div class="wide-title" data-aos="fade"><div class="line"></div><div class="title">UpCOMING EXHIbitions</div><div class="line"></div></div>
 	  	  <div class="ex-upcoming-slider-wrp">
-	  	  	 <div class="wide-title" data-aos="fade"><div class="line"></div><div class="title">UpCOMING EXHIbitions</div><div class="line"></div></div>
 	  	  	 <div class="ex-upcoming-slider">
 	  	  	 	<div class="ex-upcoming-slide-item">
 	  	  	 	  <div class="ex-upcoming-slide-two-part clearfix">

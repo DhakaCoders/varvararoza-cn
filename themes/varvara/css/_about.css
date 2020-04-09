@@ -38,6 +38,8 @@ about-interview-sec-wrp
 .about-interview-sec-wrp .wide-title .title {
     text-transform: uppercase;
     color: #fff;
+    font-family: 'Crimson Text', sans-serif;
+    font-weight: 400;
 }
 .about-interview-sec-wrp .wide-title .line {
     -webkit-box-flex: 0;
@@ -68,7 +70,7 @@ about-interview-sec-wrp
 	font-size: 10px;
 	line-height: 12px;
 	color: #BABABA;
-	font-weight: 900;
+	font-weight: 600;
 	text-transform: uppercase;
 	padding-bottom: 14px;
 }
@@ -78,6 +80,7 @@ about-interview-sec-wrp
 	color: #fff;
 	font-weight: 600;
 	margin-bottom: 6px;
+	font-family: 'Crimson Text', sans-serif;
 }
 .about-interview-slide-dsc a{
 	display: inline-block;
@@ -259,6 +262,13 @@ pagination css
     background-color: #47555e !important;
 }
 
+.ex-upcoming-slider-sec-wrp .wide-title .line {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30.8%;
+    flex: 0 0 30.8%;
+    max-width: 30.8%;
+}
+
 
 /*
 -------------------
@@ -302,6 +312,7 @@ pagination css
 	display: block;
 	margin: 0;
 	color: #000;
+	font-family: 'Crimson Text', sans-serif;
 }
 .page-banner-des p{
 	font-size: 11px;
@@ -310,6 +321,29 @@ pagination css
 	font-weight: 600;
 	text-align: center;
 	text-transform: uppercase;
+}
+.page-banner-des a {
+    display: table;
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 29px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 7px;
+}
+.page-banner-des a:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 3px;
+	background:url(../img/back-btn-arrow.png);
+	background-repeat: no-repeat;
+	background-size: 21px 10px;
+	width: 21px;
+	height: 10px;
 }
 
 /*
@@ -424,4 +458,113 @@ al-post-grid-sec-wrp
 }
 .al-post-grid-dsc h5:hover a{
 	color: #c6c6c6 !important;
+}
+
+
+
+/*
+----------------------
+ artist-single-sec-wrp
+----------------------
+*/
+.artist-single-sec-wrp{
+	padding-top: 70px;
+	padding-bottom: 110px;
+}
+.artist-single-dsc-wrp{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1070px;
+	width: 100%;
+	margin: 0 auto;
+}
+.artist-single-img{
+	width: 35%;
+	float: left;
+	background-size: cover !important;
+	background-position:center center !important;
+	background-repeat: no-repeat !important;
+	height: 470px !important;
+}
+.artist-single-dsc {
+    width: 65%;
+    float: right;
+    padding-left: 35px;
+    padding-top: 18px;
+    padding-bottom: 10px;
+}
+.artist-single-title{
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: 600;
+	font-family: 'Crimson Text', sans-serif;
+	text-transform: uppercase;
+}
+.artist-single-dsc p{
+	margin-bottom: 20px;
+}
+.gap-30{
+	margin-bottom: 35px !important;
+}
+.artist-single-dsc a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 15px;
+	font-weight: 600;
+	position: relative;
+	padding-right: 30px;
+}
+.artist-single-dsc a:before{
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 3px;
+	background:url(../img/artist-single-black-arrows.png);
+	background-repeat: no-repeat;
+	background-size: 21px 10px;
+	width: 21px;
+	height: 10px;
+}
+.about-section2{
+	padding-top: 130px;
+	padding-bottom: 80px;
+}
+
+/*
+----------------
+ Responsive Css
+----------------
+*/
+
+@media(max-width: 1199px){
+	
+
+}
+
+@media(max-width: 991px){
+	
+	
+}
+
+@media(max-width: 767px){
+	.about-interview-slide-dsc {
+	    padding: 15px 15px 18px;
+	}
+}
+
+@media(max-width: 575px){
+	
+
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
 }
