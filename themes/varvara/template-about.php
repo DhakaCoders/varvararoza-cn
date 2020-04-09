@@ -89,7 +89,7 @@ get_header(); ?>
 				  	   	<div class="about-interview-slide-item">
 				  	   	  <div class="about-interview-slide-dsc">
 				  	   	  	<span>6th november</span>
-				  	   	  	<p>Lorem ipsum title</p>
+				  	   	  	<h3>Lorem ipsum title</h3>
 				  	   	  	<a href="#">READ MORE</a>
 				  	   	  </div>
 				  	   	</div>

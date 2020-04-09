@@ -107,12 +107,12 @@ get_header(); ?>
 	  	  	 <div class="ex-upcoming-slider">
 	  	  	 	<div class="ex-upcoming-slide-item">
 	  	  	 	  <div class="ex-upcoming-slide-two-part clearfix">
-	  	  	 	  	<div class="ex-upcoming-slide-two-lft">
+	  	  	 	  	<div class="ex-upcoming-slide-two-lft order-2">
 	  	  	 	  	  <div class="ex-upcoming-slide-two-img" style="background-image:url(img/ex-upcoming-slide-two-img.png);">
 	  	  	 	  	  	<!-- <img src="img/ex-upcoming-slide-two-img.png"> -->
 	  	  	 	  	  </div>
 	  	  	 	  	</div>
-	  	  	 	  	<div class="ex-upcoming-slide-two-rgt">
+	  	  	 	  	<div class="ex-upcoming-slide-two-rgt order-1">
 	  	  	 	  	   <div class="ex-upcoming-slide-two-dsc">
 	  	  	 	  	   	 <span>UPCOMING</span>
 	  	  	 	  	   	 <span>2nd December 2019 - 20th December 2019</span>
