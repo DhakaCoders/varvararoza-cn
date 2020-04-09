@@ -112,7 +112,7 @@ ex-upcoming-slider-sec-wrp
 */
 .ex-upcoming-slider-sec-wrp {
     padding-top: 15px;
-    padding-bottom: 35px;
+    padding-bottom: 50px;
 }
 .ex-upcoming-slider-sec-wrp .wide-title .title{
 	text-transform: uppercase;
@@ -123,26 +123,34 @@ ex-upcoming-slider-sec-wrp
 	margin: 0 auto;
 }
 .ex-upcoming-slide-two-part{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 370px;
 	position: relative;
 }
 .ex-upcoming-slide-two-lft{
 	width: 50%;
 	float: right;
+	position: relative;
 }
 .ex-upcoming-slide-two-img{
-	height: 370px !important;
 	background-size: cover !important;
 	background-position: center center !important;
 	background-repeat: no-repeat !important;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 370px;
 }
 .ex-upcoming-slide-two-rgt{
 	width: 50%;
 	float: left;
 	background:#000;
 	padding: 55px 70px 45px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
 }
 .ex-upcoming-slide-two-dsc span{
 	display: block;
@@ -208,11 +216,21 @@ ex-upcoming-slider-sec-wrp
 pagination css
 -------------------
 */
+.ex-upcoming-slider .slick-dots,
 .AboutInterviewSlider .slick-dots{
 	display: inline-block;
 	position: absolute;
 	bottom: -105px;
 }
+.ex-upcoming-slider .slick-dots li{
+	background:#000 !important;
+}
+.ex-upcoming-slider .slick-dots{
+    display: inline-block;
+    position: absolute;
+    bottom: -43px;
+}
+.ex-upcoming-slider .slick-dots li,
 .AboutInterviewSlider .slick-dots li{
 	background-color: #fff;
 	transition: all 0.5s;
@@ -220,19 +238,25 @@ pagination css
 	-webkit-transition: all 0.5s;
 	margin: 0 4px;
 }
+.ex-upcoming-slider .slick-dots li,
+.ex-upcoming-slider .slick-dots li button,
+.ex-upcoming-slider .slick-dots li button:before,
 .AboutInterviewSlider .slick-dots li,
 .AboutInterviewSlider .slick-dots li button,
 .AboutInterviewSlider .slick-dots li button:before{
 	width: 27px;
 	height: 3px;
 }
-.AboutInterviewSlider .slick-dots li button:before {
+.ex-upcoming-slider .slick-dots li button:before,
+.AboutInterviewSlider .slick-dots li button:before{
    content: none;
 }
+.ex-upcoming-slider .slick-dots li.slick-active,
+.ex-upcoming-slider .slick-dots li:hover,
 .AboutInterviewSlider .slick-dots li.slick-active,
 .AboutInterviewSlider .slick-dots li:hover{
     opacity: 1;
-    background-color: #47555e;
+    background-color: #47555e !important;
 }
 
 
@@ -241,6 +265,9 @@ pagination css
  Page css
 -------------------
 */
+.page-banner{
+	padding-top: 100px;
+}
 .page-banner-controller{
 	position: relative;
 }
@@ -292,10 +319,109 @@ al-post-grid-sec-wrp
 */
 .al-post-grid-sec-wrp{
 	padding-top: 30px;
-	padding-bottom: 100px;
+	padding-bottom: 75px;
 }
 .al-post-grid-block{
 	max-width: 1040px;
 	width: 100%;
 	margin: 0 auto;
+}
+.al-post-grid-tabs-menu > ul{
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	display: table;
+}
+.al-post-grid-tabs-menu > ul > li{
+	font-size: 21px;
+	line-height: 23px;
+	font-weight: 600;
+	float: left;
+}
+.al-post-grid-tabs-menu > ul > li > a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: #000;
+	text-transform: uppercase;
+	padding: 0 20px 18px;
+	position: relative;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.al-post-grid-tabs-menu > ul > li.active > a:after,
+.al-post-grid-tabs-menu > ul > li > a:hover:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 3px;
+	background:#000;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.al-post-grid-tabs-menu > ul > li > a:hover{
+	color: #c6c6c6;
+}
+.al-post-grid-wrp{
+	padding-top: 50px;
+	border-top: 3px solid#D9D9D9;
+}
+.al-post-grid-inr ul{
+	list-style: none;
+	margin: 0 -7px;
+	padding: 0;
+}
+.al-post-grid-inr ul li{
+	width: 25%;
+	float: left;
+	padding: 0 7px 29px;
+}
+.al-post-grid-inr ul li:nth-child(4n+1){
+	clear: left;
+}
+.al-post-grid-tabs{
+	display: none;
+}
+.al-post-grid-img-overflow{
+	position: relative;
+	overflow: hidden;
+}
+.overlay-link{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+}
+.al-post-grid-img{
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: center center !important;
+	height: 255px !important;
+}
+.al-post-grid-dsc{
+	padding: 20px 10px 29px;
+}
+.al-post-grid-dsc h5{
+	margin: 0;
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: 600;
+	color: #000;
+	text-align: center;
+}
+.al-post-grid-dsc h5 a{
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: baseline;
+	color: inherit;
+}
+.al-post-grid-dsc h5:hover a{
+	color: #c6c6c6 !important;
 }
