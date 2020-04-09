@@ -9,8 +9,10 @@
 Directory
 - path to the current directory
 */
-define( 'DIR', dirname( __FILE__ ) );
 
+define( 'DIR', dirname( __FILE__ ) );
+defined( 'THEME_URI' ) or define( 'THEME_URI', get_template_directory_uri() );
+defined( 'HOMEID' ) or define( 'HOMEID', get_option('page_on_front') );
 /**
 Theme Setup->>
 */
