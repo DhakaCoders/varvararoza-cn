@@ -108,7 +108,7 @@ get_header(); ?>
 	  	  	 	<div class="ex-upcoming-slide-item">
 	  	  	 	  <div class="ex-upcoming-slide-two-part clearfix">
 	  	  	 	  	<div class="ex-upcoming-slide-two-lft order-2">
-	  	  	 	  	  <div class="ex-upcoming-slide-two-img" style="background-image:url(img/ex-upcoming-slide-two-img.png);">
+	  	  	 	  	  <div class="ex-upcoming-slide-two-img" style="background-image:url(<?php echo THEME_URI; ?>/img/ex-upcoming-slide-two-img.png);">
 	  	  	 	  	  	<!-- <img src="img/ex-upcoming-slide-two-img.png"> -->
 	  	  	 	  	  </div>
 	  	  	 	  	</div>
