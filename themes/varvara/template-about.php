@@ -57,6 +57,37 @@ get_header(); ?>
 
 			</section>
 
+			<section class="about-interview-sec-wrp">
+			  <div class="container-fluid">
+				<div class="row">
+				  <div class="col-sm-12">
+				  	 <div class="wide-title" data-aos="fade"><div class="line"></div><div class="title">interviews</div><div class="line"></div></div>
+				  	 <div class="about-interview-slider-wrp">
+				  	   <div class="AboutInterviewSlider">
+				  	   	<div class="about-interview-slide-item">
+				  	   	  <div class="about-interview-slide-dsc">
+				  	   	  	<span>6th november</span>
+				  	   	  	<p>Lorem ipsum title</p>
+				  	   	  	<a href="#">READ MORE</a>
+				  	   	  </div>
+				  	   	  <div class="about-interview-slide-dsc">
+				  	   	  	<span>6th november</span>
+				  	   	  	<p>Lorem ipsum title</p>
+				  	   	  	<a href="#">READ MORE</a>
+				  	   	  </div>
+				  	   	  <div class="about-interview-slide-dsc">
+				  	   	  	<span>6th november</span>
+				  	   	  	<p>Lorem ipsum title</p>
+				  	   	  	<a href="#">READ MORE</a>
+				  	   	  </div>
+				  	   	</div>
+				  	   </div>
+				  	 </div>
+				  </div>
+				</div>
+			  </div>
+			</section>
+
 			<section class="about-section2"  style="<?php $image = get_field('section2_image'); $size = 'aboutbg'; $thumb = $image['sizes'][ $size ]; if ($image) { ?>background-image: url(<?php echo $thumb;?>); <?php } else { ?> background-color:black <?php } ?>">
 
 				<div class="container-fluid">
