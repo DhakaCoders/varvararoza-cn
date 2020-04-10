@@ -14,6 +14,7 @@ li.product-list {
     float: left;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
 }
 .wc-enquire{
 	background: #f8f8f8;
@@ -30,4 +31,15 @@ li.product-list {
     color: black !important;
     text-align: center;
     display: block;
+}
+.filter-lft {
+    float: left;
+}
+
+.filter-rgt {
+    float: right;
+}
+
+.drop-filter {
+    float: left;
 }
