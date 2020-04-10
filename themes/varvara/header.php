@@ -26,6 +26,7 @@ gtag('config', 'UA-148365752-1');
 </script>
         <?php wp_head(); ?>
         <link rel="stylesheet" type="text/css" href="//varvararozagalleries.com/wp-content/themes/varvara/style-pha-quick-fix.css" media="all">
+        <link rel="stylesheet" type="text/css" href="fonts/custom-fonts.css">
     </head>
 
         <body <?php body_class(); ?> style="opacity:0;">

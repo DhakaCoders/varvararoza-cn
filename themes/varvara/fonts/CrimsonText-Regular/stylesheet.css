@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'CrimsonText-Regular';
+    src: url('CrimsonText-Regular/CrimsonText-Regular.eot');
+    src: url('CrimsonText-Regular/CrimsonText-Regular.eot?#iefix') format('embedded-opentype'),
+        url('CrimsonText-Regular/CrimsonText-Regular.woff2') format('woff2'),
+        url('CrimsonText-Regular/CrimsonText-Regular.woff') format('woff'),
+        url('CrimsonText-Regular/CrimsonText-Regular.ttf') format('truetype'),
+        url('CrimsonText-Regular/CrimsonText-Regular.svg#CrimsonText-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -24,11 +24,14 @@ $query = new WP_Query(array(
 	) 
 );
 ?>
+
+
+
 <section class="product-archive">
 	<div class="content-wrap">
 		<div class="container-fluid">
 			<div class="product-filter clearfix">
-				<div class="filter-lft clearfix">
+				<div class="filter-lft fl-filter-cntlr clearfix">
 				   <div class="drop-filter filter-1">
 					   <form>
 					   		<select class="selectpicker">
@@ -63,8 +66,8 @@ $query = new WP_Query(array(
 					   </form>
 				   </div>
 				</div>
-				<div class="filter-rgt clearfix">
-				   <div class="filter-4">
+				<div class="filter-rgt fl-filter-cntlr clearfix">
+				   <div class="drop-filter filter-4">
 					   <form>
 					   		<select class="selectpicker">
 			                  <option selected="selected">SORT BY</option>
@@ -117,5 +120,30 @@ $query = new WP_Query(array(
 		</div>
 	</div>
 </section>
+
+<div class="fl-modal-btn">
+	<button type="button" class="" data-toggle="modal" data-target="#enquire_modal">enquire</button>
+</div>
+
+<div class="modal fade" id="enquire_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+        <div class="modal-body">
+          <span class="modal-bx-title">login to your account</span>
+          <form>
+            <input type="text"  placeholder="Your phone number">
+            <input type="password"  placeholder="Your password">
+            <div class="text-center"><a class="forgot-title" href="#">Forgot password?</a></div>
+            <input type="submit" value="LOGIN">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> 
+
 <?php
 get_footer( 'shop' );

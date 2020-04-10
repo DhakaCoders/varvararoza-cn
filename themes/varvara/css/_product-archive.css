@@ -1,6 +1,46 @@
+
+
 section.product-archive {
     margin-bottom: 70px;
 }
+.product-filter{
+    padding-bottom: 32px;
+}
+.fl-filter-cntlr .drop-filter{
+    margin-bottom: 10px;
+}
+.fl-filter-cntlr .drop-filter .btn.dropdown-toggle{
+    background: transparent;
+    border: none;
+    color: #3E3935!important;
+    box-shadow: none!important;
+    border-bottom: 1px solid #C4C4C4!important;
+    border-radius: 0!important;
+    font-family: 'CrimsonText-SemiBold';
+
+}
+
+.fl-filter-cntlr .drop-filter .dropdown-toggle::after{
+    content: none;
+}
+.fl-filter-cntlr .drop-filter .dropdown-toggle:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 7px;
+    background: url(../img/angle-down-fl.png);
+    width: 11px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.fl-filter-cntlr .bootstrap-select .dropdown-toggle .filter-option{
+    padding-top: 0;
+}
+.filter-lft.fl-filter-cntlr .drop-filter{
+    margin-right: 30px;
+}
+
 ul.product-lists {
     margin: 0;
     padding: 0;
