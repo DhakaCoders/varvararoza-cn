@@ -90,4 +90,16 @@ li.product-list {
 
 .fl-product-grd-des{
     padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.fl-product-grd-title{
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
 }
