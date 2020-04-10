@@ -25,7 +25,9 @@ $query = new WP_Query(array(
 );
 ?>
 
-
+<section >
+	
+</section>
 
 <section class="product-archive">
 	<div class="content-wrap">
