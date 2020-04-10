@@ -97,9 +97,7 @@ $query = new WP_Query(array(
 		        <?php echo $product_thumb; ?>
 		        </div>
 		        <div class="fl-product-grd-des">
-		        	<div class="fl-product-grd-title">
-			        <h5><a href="<?php echo get_permalink( $product->get_id() ); ?>"><?php echo get_the_title(); ?></a></h5>
-			        </div>
+			        <h5 class="fl-product-grd-title"><a href="<?php echo get_permalink( $product->get_id() ); ?>"><?php echo get_the_title(); ?></a></h5>
 			        <div class="taxo">
 			        	<span class="taxo1">Oil on Canvas</span>
 			        	<span class="taxo2">Artist name</span>
