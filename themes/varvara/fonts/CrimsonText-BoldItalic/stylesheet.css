@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'CrimsonText-BoldItalic';
+    src: url('CrimsonText-BoldItalic/CrimsonText-BoldItalic.eot');
+    src: url('CrimsonText-BoldItalic/CrimsonText-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('CrimsonText-BoldItalic/CrimsonText-BoldItalic.woff2') format('woff2'),
+        url('CrimsonText-BoldItalic/CrimsonText-BoldItalic.woff') format('woff'),
+        url('CrimsonText-BoldItalic/CrimsonText-BoldItalic.ttf') format('truetype'),
+        url('CrimsonText-BoldItalic/CrimsonText-BoldItalic.svg#CrimsonText-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+

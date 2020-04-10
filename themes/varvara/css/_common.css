@@ -1,0 +1,110 @@
+/**
+Commons
+*/
+*, *:focus,.btn,.btn:focus{
+	outline: 0!important;
+	text-decoration: none;
+}
+a, button, input{
+	outline: 0;
+	border: 0;
+}
+a, a:hover, a:focus, button:hover, button:focus{
+	text-decoration: none;
+	outline: 0;
+}
+
+body {
+
+}
+
+
+/**
+Containers
+*/
+.container-xlg,
+.container-lg,
+.container-md,
+.container-sm{
+	width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-xlg:before,
+.container-xlg:after,
+.container-lg:before,
+.container-lg:after,
+.container-md:before,
+.container-md:after,
+.container-sm:beofre,
+.container-sm:after,
+.container-xs:beofre,
+.container-xs:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.container-xlg{}
+.container-lg{}
+.container{
+	
+}
+.container-md{}
+
+.container-sm{}
+
+
+.ulc{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.first:first-child{
+	padding-left: 0;
+	margin-left: 0;
+}
+.last:last-child{
+	padding-right: 0;
+	margin-right: 0;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.hide-md{
+	display: block!important;
+}
+.show-md{
+	display: none!important;
+}
+.hide-sm{
+	display: block!important;
+}
+.show-sm{
+	display: none!important;
+}
+.hide-xs{
+	display: block!important;
+}
+.show-xs{
+	display: none!important;
+}
+
+.divider{
+	line-height: 0;
+	font-size: 0;
+}
+.overlay-link{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+

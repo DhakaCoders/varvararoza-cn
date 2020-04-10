@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'CrimsonText-SemiBold';
+    src: url('CrimsonText-SemiBold/CrimsonText-SemiBold.eot');
+    src: url('CrimsonText-SemiBold/CrimsonText-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('CrimsonText-SemiBold/CrimsonText-SemiBold.woff2') format('woff2'),
+        url('CrimsonText-SemiBold/CrimsonText-SemiBold.woff') format('woff'),
+        url('CrimsonText-SemiBold/CrimsonText-SemiBold.ttf') format('truetype'),
+        url('CrimsonText-SemiBold/CrimsonText-SemiBold.svg#CrimsonText-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
