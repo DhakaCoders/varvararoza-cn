@@ -62,7 +62,7 @@ get_header(); ?>
 			  <div class="container-fluid">
 				<div class="row">
 				  <div class="col-sm-12">
-				  	 <div class="wide-title" data-aos="fade"><div class="line"></div><div class="title">interviews</div><div class="line"></div></div>
+				  	<div class="wide-title" data-aos="fade"><div class="line"></div><div class="title">interviews</div><div class="line"></div></div>
 				  	 <div class="about-interview-slider-wrp">
 				  	   <div class="AboutInterviewSlider">
 				  	   	<div class="about-interview-slide-item">
