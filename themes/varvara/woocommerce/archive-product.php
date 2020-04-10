@@ -93,15 +93,17 @@ $query = new WP_Query(array(
 		      <li class="product-list gallery-col">
 		        
 				<div class="product-grid-inr">
-		        <div class="product-grid-img"><a href="<?php echo get_permalink( $product->get_id() ); ?>" class="overlay-link"></a>
+		        <div class="fl-product-grd-img"><a href="<?php echo get_permalink( $product->get_id() ); ?>" class="overlay-link"></a>
 		        <?php echo $product_thumb; ?>
 		        </div>
-		        <div class="product-grid-title">
-		        <h5><a href="<?php echo get_permalink( $product->get_id() ); ?>"><?php echo get_the_title(); ?></a></h5>
-		        </div>
-		        <div class="taxo">
-		        	<span class="taxo1">Oil on Canvas</span>
-		        	<span class="taxo2">Artist name</span>
+		        <div class="fl-product-grd-des">
+		        	<div class="fl-product-grd-title">
+			        <h5><a href="<?php echo get_permalink( $product->get_id() ); ?>"><?php echo get_the_title(); ?></a></h5>
+			        </div>
+			        <div class="taxo">
+			        	<span class="taxo1">Oil on Canvas</span>
+			        	<span class="taxo2">Artist name</span>
+			        </div>
 		        </div>
 		        <div class="wc-enquire">
 		        	<?php

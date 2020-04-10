@@ -83,3 +83,11 @@ li.product-list {
 .drop-filter {
     float: left;
 }
+
+.fl-product-grd-img{
+    position: relative;
+}
+
+.fl-product-grd-des{
+    padding: 20px;
+}
