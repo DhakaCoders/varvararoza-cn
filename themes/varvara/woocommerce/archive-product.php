@@ -27,6 +27,54 @@ $query = new WP_Query(array(
 <section class="product-archive">
 	<div class="content-wrap">
 		<div class="container-fluid">
+			<div class="product-filter clearfix">
+				<div class="filter-lft clearfix">
+				   <div class="drop-filter filter-1">
+					   <form>
+					   		<select class="selectpicker">
+			                  <option selected="selected">ALL ARTISTS</option>
+			                   <option>Maart 1</option>
+			                   <option>Maart 2</option>
+			                   <option>Maart 3</option>
+			                   <option>Maart 4</option>
+			                </select> 
+					   </form>
+				   </div>
+				   <div class="drop-filter filter-2">
+					   <form>
+					   		<select class="selectpicker">
+			                  <option selected="selected">ALL METHODS</option>
+			                   <option>Maart 1</option>
+			                   <option>Maart 2</option>
+			                   <option>Maart 3</option>
+			                   <option>Maart 4</option>
+			                </select> 
+					   </form>
+				   </div>
+				   <div class="drop-filter filter-3">
+					   <form>
+					   		<select class="selectpicker">
+			                  <option selected="selected">TYPE OF ART</option>
+			                   <option>Maart 1</option>
+			                   <option>Maart 2</option>
+			                   <option>Maart 3</option>
+			                   <option>Maart 4</option>
+			                </select> 
+					   </form>
+				   </div>
+				</div>
+				<div class="filter-rgt clearfix">
+				   <div class="filter-4">
+					   <form>
+					   		<select class="selectpicker">
+			                  <option selected="selected">SORT BY</option>
+			                   <option>DESC</option>
+			                   <option>ASC</option>
+			                </select> 
+					   </form>
+				   </div>
+				</div>
+			</div>
 			<ul class="product-lists clearfix">
 			 <?php 
 			  $product_thumb = '';
