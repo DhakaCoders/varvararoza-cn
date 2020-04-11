@@ -16,3 +16,11 @@
 
 2020-04-11T15:28:38+00:00 CRITICAL Cannot redeclare products_script_load_more() (previously declared in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\product-loadmore.php:6) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php on line 20
 
+2020-04-11T15:48:33+00:00 CRITICAL Cannot redeclare products_script_load_more() (previously declared in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\product-loadmore.php:6) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php on line 20
+
+2020-04-11T15:50:33+00:00 CRITICAL Cannot redeclare products_script_load_more() (previously declared in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\product-loadmore.php:6) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php on line 20
+
+2020-04-11T15:50:35+00:00 CRITICAL Cannot redeclare products_script_load_more() (previously declared in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\product-loadmore.php:6) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php on line 20
+
+2020-04-11T15:50:40+00:00 CRITICAL Cannot redeclare products_script_load_more() (previously declared in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\product-loadmore.php:6) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php on line 20
+

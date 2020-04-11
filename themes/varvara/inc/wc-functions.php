@@ -141,9 +141,15 @@ if (!function_exists('add_custom_box_product_summary')) {
             echo '<div class="pricehtml"><strong class="price">Price:</strong> '.$product->get_price_html().'</div>';
             echo '<a href="'.esc_url(home_url( '/' )).'checkout/?add-to-cart='.get_the_ID().'" class="btn btn-primary">'.__('Purchase!', 'your-domain').'</a>';
         }
-        echo '<div class="share-article">
-        <strong>Share this article</strong>
-        </div>';
+    echo '<div class="fl-social-icons">
+        <strong>Share this Article</strong>
+        <ul class="clearfix ulc">
+            <li><a href="#"><img src="'.THEME_URI.'/img/facebook.png"></a></li>
+            <li><a href="#"><img src="'.THEME_URI.'/img/instagram.png"></a></li>
+            <li><a href="#"><img src="'.THEME_URI.'/img/twitter.png"></a></li>
+            <li><a href="#"><img src="'.THEME_URI.'/img/envelope.png"></a></li>
+        </ul>
+    </div>';
         echo'</div>';
     }
 }

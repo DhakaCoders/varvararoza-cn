@@ -3,14 +3,14 @@
  * initial posts dispaly
  */
 
-function products_script_load_more($args = array()) {
+function art_script_load_more($args = array()) {
   $sorting =$termid = '';
   $ccat = get_queried_object();
   if( $ccat ) $termid = @$ccat->term_id;
   if( isset($_COOKIE['sorting']) && !empty($_COOKIE['sorting'])) $sorting = $_COOKIE['sorting'];
 
   echo '<ul class="product-lists clearfix" id="ajax-content">';
-      ajax_products_script_load_more($args, $termid, $sorting);
+      ajax_art_script_load_more($args, $termid, $sorting);
   echo '</ul>';
   echo '<div class="fl-load-more-btn">
   <div class="ajaxloading" id="ajxaloader" style="display:none"><img src="'.THEME_URI.'/img/loading.gif" alt="loader"></div>
@@ -21,13 +21,13 @@ function products_script_load_more($args = array()) {
 /*
  * create short code.
  */
-add_shortcode('ajax_products', 'products_script_load_more');
+add_shortcode('ajax_art', 'art_script_load_more');
 
 
 /*
  * load more script call back
  */
-function ajax_products_script_load_more($args, $term_id='', $sort = 'DESC') {
+function ajax_art_script_load_more($args, $term_id='', $sort = 'DESC') {
     //init ajax
     $ajax = false;
     //check ajax call or not
@@ -126,5 +126,5 @@ function ajax_products_script_load_more($args, $term_id='', $sort = 'DESC') {
 /*
  * load more script ajax hooks
  */
-add_action('wp_ajax_nopriv_ajax_products_script_load_more', 'ajax_products_script_load_more');
-add_action('wp_ajax_ajax_products_script_load_more', 'ajax_products_script_load_more');
+add_action('wp_ajax_nopriv_ajax_art_script_load_more', 'ajax_art_script_load_more');
+add_action('wp_ajax_ajax_art_script_load_more', 'ajax_art_script_load_more');
