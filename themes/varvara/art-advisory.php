@@ -61,7 +61,7 @@ get_header();?>
 		  	  	  	</div>
 		  	  	  </li>
 		  	  	  <li>
-		  	  	  	<div class="art-post-grid-inr clearfix">
+		  	  	  	<div class="art-post-grid-inr">
 		  	  	  	  <div class="art-post-grid-img" style="background:url(<?php echo THEME_URI;?>/img/art-post-grid-img.png);">
 		  	  	  	  	<a href="#" class="overlay-link"></a>
 		  	  	  	  </div>

@@ -592,6 +592,10 @@ al-post-grid-sec-wrp
 	.page-banner-title br{
 		display: none;
 	}
+	section.global-exhibitions .title {
+	    padding-left: 90px;
+	    padding-right: 90px;
+	}
 
 }
 
@@ -661,6 +665,20 @@ al-post-grid-sec-wrp
 	.art-page-banner .page-banner-title {
 	    font-size: 32px !important;
 	    line-height: 38px !important;
+	}
+	section.global-exhibitions .title {
+	    padding-left: 50px;
+	    padding-right: 50px;
+	}
+	.wide-title .title {
+	    padding: 40px 40px;
+	}
+	section.global-exhibitions .img-wrap img{
+		width: 100%;
+	}
+	section.global-exhibitions .img-wrap{
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 
@@ -741,6 +759,15 @@ al-post-grid-sec-wrp
 	    line-height: 36px !important;
 	    margin-bottom: 25px;
 	}
+
+	.global-exhibitions .title {
+      	padding: 40px 20px !important;
+	  }
+	  .global-exhibitions .wide-title .line {
+	      -ms-flex: 0 0 27%;
+	      flex: 0 0 27%;
+	      max-width: 27%;
+	  }
 
 }
 
@@ -833,6 +860,11 @@ al-post-grid-sec-wrp
 	.artist-single-img {
 	    height: 350px !important;
 	}
+	.global-exhibitions .wide-title .line {
+	    -ms-flex: 0 0 17%;
+	    flex: 0 0 17%;
+	    max-width: 17%;
+	}
 }
 
 @media(max-width: 359px){
@@ -840,39 +872,3 @@ al-post-grid-sec-wrp
 }
 
 
-/*
--------------------
- New Css
--------------------
-*/
-
-.about-section2{
-  padding-top: 130px;
-  padding-bottom: 80px;
-}
-
-
-
-
-@media(max-width: 1199px){
-	
-}
-@media(max-width: 991px){
-
-}
-@media(max-width: 767px){
-  .global-exhibitions .title {
-      padding: 40px 25px !important;
-  }
-  .global-exhibitions .wide-title .line {
-      -ms-flex: 0 0 27%;
-      flex: 0 0 27%;
-      max-width: 27%;
-  } 
-}
-@media(max-width: 575px){
-
-}
-@media(max-width: 479px){
-
-}
