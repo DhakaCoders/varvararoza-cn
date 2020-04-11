@@ -175,11 +175,29 @@ $("#artloadMore").on('click', function(e) {
     });
 });
 
+if( $("#shopUrl").length ){
+  var SURL = $("#shopUrl").data('url');
+}
+
+$('#artist_name').on('change', function(){               
+  var artist = $(this).val();
+  window.location.href = SURL+'?artist-id='+artist;
+});
+
+$('#methods').on('change', function(){               
+  var methods = $(this).val();
+  window.location.href = SURL+'?method='+methods;
+});
+
+$('#art-type').on('change', function(){               
+  var arttype = $(this).val();
+  window.location.href = SURL+'?arttype='+arttype;
+});
+
 $('#sortproduct').on('change', function(){               
   var campSort = $(this).val();
-  var URL = $('#sortproduct').data('url');
   setCookie('sorting', campSort, 1);
-  window.location.href = URL;
+  window.location.href = SURL;
 });
 
 })(jQuery);

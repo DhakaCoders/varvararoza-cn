@@ -35,3 +35,5 @@ Stack trace:
 #6 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
 #7 C in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php on line 57
 
+2020-04-11T17:20:40+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\woocommerce\archive-product.php on line 65
+
