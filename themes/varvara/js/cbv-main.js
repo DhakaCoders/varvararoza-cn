@@ -135,11 +135,69 @@ $("#loadMore").on('click', function(e) {
     });
 });
 
+$("#artloadMore").on('click', function(e) {
+    e.preventDefault();
+    //init
+    var that = $(this);
+    var page = $(this).data('page');
+    var newPage = page + 1;
+    var ajaxurl = that.data('url');
+    //ajax call
+    $.ajax({
+        url: ajaxurl,
+        type: 'post',
+        data: {
+            page: page,
+            el_li: 'not',
+            action: 'ajax_art_script_load_more'
+        },
+        beforeSend: function ( xhr ) {
+            $('#ajxaloader').show();
+             
+        },
+        
+        success: function(response ) {
+            //check
+            console.log(response);
+            if (response  == 0) {
+                //$('.art-load-more-btn').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
+                $('.art-load-more-btn').hide();
+                $('#ajxaloader').hide();
+            } else {
+                $('#ajxaloader').hide();
+                that.data('page', newPage);
+                $('#art-content').append(response.substr(response.length-1, 1) === '0'? response.substr(0, response.length-1) : response);
+            }
+        },
+        error: function(response ) {
+            console.log('asdfsd');
+        },
+    });
+});
+
+if( $("#shopUrl").length ){
+  var SURL = $("#shopUrl").data('url');
+}
+
+$('#artist_name').on('change', function(){               
+  var artist = $(this).val();
+  window.location.href = SURL+'?artist-id='+artist;
+});
+
+$('#methods').on('change', function(){               
+  var methods = $(this).val();
+  window.location.href = SURL+'?method='+methods;
+});
+
+$('#art-type').on('change', function(){               
+  var arttype = $(this).val();
+  window.location.href = SURL+'?arttype='+arttype;
+});
+
 $('#sortproduct').on('change', function(){               
   var campSort = $(this).val();
-  var URL = $('#sortproduct').data('url');
   setCookie('sorting', campSort, 1);
-  window.location.href = URL;
+  window.location.href = SURL;
 });
 
 })(jQuery);

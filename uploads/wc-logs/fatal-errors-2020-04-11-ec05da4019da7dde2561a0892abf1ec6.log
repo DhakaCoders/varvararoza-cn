@@ -24,3 +24,16 @@
 
 2020-04-11T15:50:40+00:00 CRITICAL Cannot redeclare products_script_load_more() (previously declared in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\product-loadmore.php:6) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php on line 20
 
+2020-04-11T16:15:14+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php:57
+Stack trace:
+#0 C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php(12): ajax_art_script_load_more('', 'asc')
+#1 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\shortcodes.php(325): art_script_load_more('', '', 'ajax_art')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\shortcodes.php(199): preg_replace_callback('/\\[(\\[?)(ajax_a...', 'do_shortcode_ta...', '[ajax_art]')
+#4 C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\archive-art_advisory.php(40): do_shortcode('[ajax_art]')
+#5 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\template-loader.php(98): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#7 C in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\art-advisory-loadmore.php on line 57
+
+2020-04-11T17:20:40+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\woocommerce\archive-product.php on line 65
+
