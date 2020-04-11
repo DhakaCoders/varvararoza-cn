@@ -1,0 +1,85 @@
+/*
+-------------------
+ New Css
+-------------------
+*/
+@media(max-width: 1199px){
+	section.global-exhibitions .title {
+	    padding-left: 90px;
+	    padding-right: 90px;
+	}
+	.wide-title .title{
+		font-size: 24px;
+	}
+	
+}
+@media(max-width: 991px){
+	section.global-exhibitions .title {
+	    padding-left: 50px;
+	    padding-right: 50px;
+	}
+	.wide-title .title {
+	    padding: 40px 30px;
+	}
+	.previous-exhibitions .img-wrap img,
+	section.global-exhibitions .img-wrap img{
+		width: 100% !important;
+	}
+	.previous-exhibitions .img-wrap,
+	section.global-exhibitions .img-wrap{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.wide-title .title{
+		font-size: 23px;
+	}
+	.wide-title {
+	    max-width: 746px;
+	}
+	
+
+}
+@media(max-width: 767px){
+	.global-exhibitions .title {
+      	padding: 40px 20px !important;
+	  }
+	  .global-exhibitions .wide-title .line {
+	      -ms-flex: 0 0 27%;
+	      flex: 0 0 27%;
+	      max-width: 27%;
+	  }
+	  div.content-wrap.about-wrap section.about-section1 {
+	    padding-top: 40px;
+	}
+	.previous-exhibitions .wide-title .title {
+	    padding: 40px 20px;
+	}
+	.wide-title {
+	    max-width: 530px;
+	}
+	.wide-title .title{
+		font-size: 21px;
+	}
+   
+}
+@media(max-width: 575px){
+	.wide-title .title{
+		font-size: 21px;
+	}
+	.wide-title {
+	    max-width: 430px;
+	}
+}
+@media(max-width: 479px){
+	.previous-exhibitions .wide-title .title {
+	    padding: 30px 20px;
+	}
+	.wide-title {
+	    max-width: 290px;
+	}
+}
+@media(max-width: 360px){
+	.wide-title {
+	    max-width: 220px;
+	}
+}
