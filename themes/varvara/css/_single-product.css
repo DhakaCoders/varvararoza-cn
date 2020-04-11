@@ -83,3 +83,16 @@ body .woocommerce-product-gallery {
 	min-width: 91px;
 	text-transform: uppercase;
 }
+
+.price-purchase > a{
+	border: 2px solid #000;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.price-purchase > a:hover{
+	background: transparent;
+	color: #000!important;
+	border-color: #000!important;
+}
