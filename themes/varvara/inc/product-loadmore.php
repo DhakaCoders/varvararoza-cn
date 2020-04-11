@@ -4,13 +4,15 @@
  */
 
 function products_script_load_more($args = array()) {
-  $sorting =$termid = '';
+  $sorting =$termid = $artist = $method = $arttype ='';
   $ccat = get_queried_object();
   if( $ccat ) $termid = @$ccat->term_id;
   if( isset($_COOKIE['sorting']) && !empty($_COOKIE['sorting'])) $sorting = $_COOKIE['sorting'];
-
+  if( isset($_GET['artist-id']) && !empty($_GET['artist-id'])) $artist = $_GET['artist-id'];
+  if( isset($_GET['method']) && !empty($_GET['method'])) $method = $_GET['method'];
+  if( isset($_GET['arttype']) && !empty($_GET['arttype'])) $arttype = $_GET['arttype'];
   echo '<ul class="product-lists clearfix" id="ajax-content">';
-      ajax_products_script_load_more($args, $termid, $sorting);
+      ajax_products_script_load_more($args, $termid, $artist, $method, $arttype, $sorting);
   echo '</ul>';
   echo '<div class="fl-load-more-btn">
   <div class="ajaxloading" id="ajxaloader" style="display:none"><img src="'.THEME_URI.'/img/loading.gif" alt="loader"></div>
@@ -27,7 +29,7 @@ add_shortcode('ajax_products', 'products_script_load_more');
 /*
  * load more script call back
  */
-function ajax_products_script_load_more($args, $term_id='', $sort = 'DESC') {
+function ajax_products_script_load_more($args, $term_id = '', $artist= '', $method= '', $arttype= '', $sort = 'DESC') {
     //init ajax
     $ajax = false;
     //check ajax call or not
@@ -39,24 +41,61 @@ function ajax_products_script_load_more($args, $term_id='', $sort = 'DESC') {
     $num = 4;
     //page number
     $paged = 1;
-    if(isset($_POST['cat_id']) && !empty($_POST['cat_id'])){
-      $term_id = $_POST['cat_id'];
+    if(isset($_POST['artist']) && !empty($_POST['artist'])){
+      $artist = $_POST['artist'];
     }
+    if(isset($_POST['method']) && !empty($_POST['method'])){
+      $method = $_POST['method'];
+    }
+    if(isset($_POST['arttype']) && !empty($_POST['arttype'])){
+      $arttype = $_POST['arttype'];
+    }
+
     if(isset($_POST['page']) && !empty($_POST['page'])){
         $paged = $_POST['page'] + $paged;
     }
-    $termQuery = '';
+    $termQuery = $metaQuery = '';
 
-    if( isset($term_id) && !empty($term_id)){
+    if( !empty($method) && !empty($arttype)){
+      $termQuery = array(
+        'relation' => 'AND',
+        array(
+          'taxonomy' => 'methods',
+          'field' => 'slug',
+          'terms' => $method
+        ),
+        array(
+          'taxonomy' => 'art_type',
+          'field' => 'slug',
+          'terms' => $arttype
+        )
+      );
+    } elseif( !empty($method) && empty($arttype) ){
       $termQuery = array(
         array(
-          'taxonomy' => 'campaign',
-          'field' => 'term_id',
-          'terms' => $term_id
+          'taxonomy' => 'methods',
+          'field' => 'slug',
+          'terms' => $method
+        )
+      );
+    } elseif( empty($method) && !empty($arttype) ){
+      $termQuery = array(
+        array(
+          'taxonomy' => 'art_type',
+          'field' => 'slug',
+          'terms' => $arttype
         )
       );
     }
 
+    if( !empty($artist)){
+      $metaQuery = array(array(
+            'key'     => 'artist',
+            'value'   => $artist,
+            'compare' => '=',
+        )
+    );
+    }
     $query = new WP_Query(array( 
         'post_type'=> 'product',
         'post_status' => 'publish',
@@ -64,7 +103,8 @@ function ajax_products_script_load_more($args, $term_id='', $sort = 'DESC') {
         'paged'=>$paged,
         'orderby' => 'date',
         'order'=> $sort,
-        'tax_query' => $termQuery
+        'tax_query' => $termQuery,
+        'meta_query' => $metaQuery
       ) 
     );
     if($query->have_posts()){
@@ -75,8 +115,8 @@ function ajax_products_script_load_more($args, $term_id='', $sort = 'DESC') {
           $product_thumb = cbv_get_image_tag($thumb_id, 'prodgrid');
       }
       $proinfo = get_field('productsec', get_the_ID());
+      $artistID = get_field('artist', get_the_ID());
       $spacifics = $proinfo['size'];
-      $artistID = $proinfo['artist'];
     ?>
     <li class="product-list gallery-col">
         <div class="product-grid-inr">

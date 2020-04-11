@@ -49,81 +49,43 @@ $page = get_post( $shopID );
 </section>
 <?php 
 endif; 
-if( isset($_SERVER['QUERY_STRING']) && !empty($_SERVER['QUERY_STRING']) ){
-	$type = explode('=', $_SERVER['QUERY_STRING']);
-	var_dump($type);
-	if( isset($type[0]) && isset($type[1]) && isset($type[2]) ){
-		if( ($type[0] == 'artist-id') && ($type[1] == 'method') && ($type[2] == 'arttype') ){
-			$qstr = '?artist-id='.$type[0].'&method='.$type[1].'&arttype='.$type[2];
-
-		}elseif( ($type[0] == 'artist-id') && ($type[1] == 'arttype') && ($type[2] == 'method') ){
-			$qstr = '?artist-id='.$type[0].'&arttype='.$type[1].'&method='.$type[2];
-
-		}elseif( ($type[0] == 'method') && ($type[1] == 'artist-id') && ($type[2] == 'arttype') ){
-			$qstr = '?method='.$type[0].'&artist-id='.$type[1].'&arttype='.$type[2];
-
-		} elseif( ($type[0] == 'method') && ($type[1] == 'arttype') && ($type[2] == 'artist-id') ){
-			$qstr = '?method='.$type[0].'&arttype='.$type[1].'&artist-id='.$type[2];
-
-		}elseif( ($type[0] == 'arttype') && ($type[1] == 'method') && ($type[2] == 'artist-id') ){
-			$qstr = '?arttype='.$type[0].'&method='.$type[1].'&artist-id='.$type[2];
-
-		}elseif( ($type[0] == 'arttype') && ($type[1] == 'artist-id') && ($type[2] == 'method') ){
-			$qstr = '?arttype='.$type[0].'&artist-id='.$type[1].'&method='.$type[2];
-		}
-		
-	} elseif( isset($type[0]) && isset($type[1]) ){
-		if( ($type[0] == 'artist-id') && ($type[1] == 'method') ){
-			$qstr = '?artist-id='.$type[0].'&method='.$type[1];
-
-		} elseif( ($type[0] == 'artist-id') && ($type[1] == 'arttype') ){
-			$qstr = '?artist-id='.$type[0].'&arttype='.$type[1];
-
-		}elseif( ($type[0] == 'method') && ($type[1] == 'artist-id') ){
-			$qstr = '?method='.$type[0].'&artist-id='.$type[1];
-
-		}elseif( ($type[0] == 'method') && ($type[1] == 'arttype') ){
-			$qstr = '?method='.$type[0].'&arttype='.$type[1];
-
-		}elseif( ($type[0] == 'arttype') && ($type[1] == 'artist-id') ){
-			$qstr = '?arttype='.$type[0].'&artist-id='.$type[1];
-
-		}elseif( ($type[0] == 'arttype') && ($type[1] == 'method') ){
-			$qstr = '?arttype='.$type[0].'&method='.$type[1];
-
-		}
-	} else {
-		if( ($type[0] == 'artist-id') ){
-			$qstr = '?artist-id='.$type[0];
-
-		} elseif( ($type[0] == 'method') ){
-			$qstr = '?method='.$type[0];
-
-		}elseif( ($type[0] == 'arttype') ){
-			$qstr = '?arttype='.$type[0];
-		}
-	}
-} else {
-	$qstr = '';
-}
-
+$artistid = $methodd = $arttype = '';
+if( isset($_GET['artist-id']) && !empty($_GET['artist-id'])):
+	$artistid = $_GET['artist-id'];
+endif;
+if( isset($_GET['method']) && !empty($_GET['method'])):
+	$methodd = $_GET['method'];
+endif;
+if( isset($_GET['arttype']) && !empty($_GET['arttype'])):
+	$arttype = $_GET['arttype'];
+endif;
 ?>
-<span id="shopUrl" data-url="<?php echo get_permalink($shopID).$qstr; ?>" style="display: none;"></span>
+<span id="shopUrl" data-url="<?php echo get_permalink($shopID); ?>" style="display: none;"></span>
+
+<span id="filtertype" data-id="<?php echo $artistid ?>" data-method="<?php echo $methodd ?>" data-arttype="<?php echo $arttype ?>" style="display: none;"></span>
 <section class="product-archive">
 	<div class="content-wrap">
 		<div class="container-fluid">
 			<div class="product-filter clearfix">
 				<div class="filter-lft fl-filter-cntlr clearfix">
 				   <div class="drop-filter filter-1">
-				   		<select id="artist_name" class="drowpdwon-filter" onchange="this.form.submit()">
-		                  <option selected="selected" value="">ALL ARTISTS</option>
+				   	<form action="" method="get">
+				   		<select name="artist-id" class="drowpdwon-filter" onchange="this.form.submit()">
+		                  <option selected="selected" value="0">ALL ARTISTS</option>
 		                  <?php 
 		                    if( $artquery->have_posts() ): 
 	            			while( $artquery->have_posts() ): $artquery->the_post(); 
 		                  ?>
-		                   <option value="<?php the_ID(); ?>"><?php the_title(); ?></option>
+		                   <option value="<?php the_ID(); ?>" <?php echo ($artistid == get_the_ID())? 'selected="selected"': '';?>><?php the_title(); ?></option>
 		                   <?php endwhile; endif; wp_reset_postdata(); ?>
 		                </select> 
+		                <?php if( isset($_GET['method']) && !empty($_GET['method'])): ?>
+		                <input type="hidden" name="method" value="<?php echo $_GET['method']; ?>">
+		            	<?php endif; ?>
+		            	<?php if( isset($_GET['arttype']) && !empty($_GET['arttype'])): ?>
+		                <input type="hidden" name="arttype" value="<?php echo $_GET['arttype']; ?>">
+		                <?php endif; ?>
+		            </form>
 				   </div>
 				   <div class="drop-filter filter-2">
 				   	<?php 
@@ -132,16 +94,23 @@ if( isset($_SERVER['QUERY_STRING']) && !empty($_SERVER['QUERY_STRING']) ){
 		                  'hide_empty' => false
 		              ) );
 		            ?>
-			   		<select id="methods" class="drowpdwon-filter">
-	                  <option selected="selected">ALL METHODS</option>
+		            <form action="" method="get">
+			   		<select name="method" class="drowpdwon-filter" onchange="this.form.submit()">
+	                  <option selected="selected" value="0">ALL METHODS</option>
 	                    <?php if ( !empty($methods) ) : ?>
 		                <?php 
-		                foreach( $methods as $method ) {
-		                  echo '<option value="' . $method->slug . '">'.$method->name.'</option>';
-		                }
-		                ?>
+		                foreach( $methods as $method ) {?>
+		                  <option value="<?php echo $method->slug; ?>"  <?php echo ($methodd == $method->slug)? 'selected="selected"': '';?>><?php echo $method->name; ?></option>';
+		                <?php }?>
 		                <?php endif; ?>
 	                </select> 
+	                <?php if( isset($_GET['artist-id']) && !empty($_GET['artist-id'])): ?>
+	                <input type="hidden" name="artist-id" value="<?php echo $_GET['artist-id']; ?>">
+	            	<?php endif; ?>
+	            	<?php if( isset($_GET['arttype']) && !empty($_GET['arttype'])): ?>
+	                <input type="hidden" name="arttype" value="<?php echo $_GET['arttype']; ?>">
+	                <?php endif; ?>
+	            	</form>
 				   </div>
 				   <div class="drop-filter filter-3">
 				   	<?php 
@@ -150,22 +119,29 @@ if( isset($_SERVER['QUERY_STRING']) && !empty($_SERVER['QUERY_STRING']) ){
 		                  'hide_empty' => false
 		              ) );
 		            ?>
-			   		<select id="art-type" class="drowpdwon-filter">
-	                  <option selected="selected">TYPE OF ART</option>
+		            <form action="" method="get">
+			   		<select name="arttype" class="drowpdwon-filter" onchange="this.form.submit()">
+	                  <option selected="selected" value="0">TYPE OF ART</option>
 	                   <?php if ( !empty($art_types) ) : ?>
 		                <?php 
-		                foreach( $art_types as $art_type ) {
-		                  echo '<option value="' . $art_type->slug . '">'.$art_type->name.'</option>';
-		                }
-		                ?>
+		                foreach( $art_types as $art_type ) { ?>
+		                  <option value="<?php echo $art_type->slug; ?>"  <?php echo ($arttype == $art_type->slug)? 'selected="selected"': '';?>><?php echo $art_type->name; ?></option>';
+		                <?php }?>
 		                <?php endif; ?>
 	                </select> 
+	                <?php if( isset($_GET['artist-id']) && !empty($_GET['artist-id'])): ?>
+	                <input type="hidden" name="artist-id" value="<?php echo $_GET['artist-id']; ?>">
+	            	<?php endif; ?>
+	            	<?php if( isset($_GET['method']) && !empty($_GET['method'])): ?>
+	                <input type="hidden" name="method" value="<?php echo $_GET['method']; ?>">
+	                <?php endif; ?>
+	            	</form>
 				   </div>
 				</div>
 				<div class="filter-rgt fl-filter-cntlr clearfix">
 				   <div class="drop-filter filter-4">
 					    <select class="drowpdwon-filter" id="sortproduct">
-						    <option selected="selected">SORT BY</option>
+						    <option selected="selected" value="">SORT BY</option>
 			                <option value="desc" <?php echo ($sorting == 'desc')? 'selected="selected"': '';?>>DESC</option>
 			                <option value="asc" <?php echo ($sorting == 'asc')? 'selected="selected"': '';?>>ASC</option>
 		                </select>

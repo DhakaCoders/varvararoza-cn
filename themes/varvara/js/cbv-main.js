@@ -91,11 +91,44 @@ function catId(){
     return false;
 }
 
+if($("#filtertype").length){
+  var artistID = $("#filtertype").data('id');
+  var method = $("#filtertype").data('method');
+  var artType = $("#filtertype").data('arttype');
+}
+
+function artistId(){
+  if(artistID != '')
+    return artistID;
+  else
+    return false;
+}
+function methodd(){
+  if(method != '')
+    return method;
+  else
+    return false;
+}
+function artTypee(){
+  if(artType != '')
+    return artType;
+  else
+    return false;
+}
 
 $("#loadMore").on('click', function(e) {
     e.preventDefault();
     var catID = '';
+    var artistID = '';
+    var method = '';
+    var artType = '';
     if(catId() != '') catID = catId();
+    if(artistId() != '') artistID = artistId();
+    if(methodd() != '') method = methodd();
+    if(artTypee() != '') artType = artTypee();
+    console.log(artistID);
+    console.log(method);
+    console.log(artType);
     //init
     var that = $(this);
     var page = $(this).data('page');
@@ -107,7 +140,9 @@ $("#loadMore").on('click', function(e) {
         type: 'post',
         data: {
             page: page,
-            cat_id: catID,
+            artist: artistID,
+            method: method,
+            arttype: artType,
             el_li: 'not',
             action: 'ajax_products_script_load_more'
         },
@@ -178,22 +213,6 @@ $("#artloadMore").on('click', function(e) {
 if( $("#shopUrl").length ){
   var SURL = $("#shopUrl").data('url');
 }
-
-$('#artist_name').on('change', function(){               
-  var artist = $(this).val();
-  window.location.href = SURL+'?artist-id='+artist;
-});
-
-$('#methods').on('change', function(){               
-  var methods = $(this).val();
-  window.location.href = SURL+'?method='+methods;
-});
-
-$('#art-type').on('change', function(){               
-  var arttype = $(this).val();
-  window.location.href = SURL+'?arttype='+arttype;
-});
-
 $('#sortproduct').on('change', function(){               
   var campSort = $(this).val();
   setCookie('sorting', campSort, 1);
