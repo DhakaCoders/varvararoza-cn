@@ -20,6 +20,8 @@ if( !function_exists('cbv_theme_setup') ){
 	
 	function cbv_theme_setup(){
 		add_theme_support( 'woocommerce' );
+		add_image_size( 'artistgrid', 250, 255, true );
+		add_image_size( 'exhgrid', 536, 370, true );
 	}
 
 }

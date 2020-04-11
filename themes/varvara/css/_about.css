@@ -210,7 +210,7 @@ ex-upcoming-slider-sec-wrp
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.ex-upcoming-btn a{
+.ex-upcoming-btn .abtn{
 	display: inline-block;
 	vertical-align: baseline;
 	text-decoration: none;
@@ -230,7 +230,7 @@ ex-upcoming-slider-sec-wrp
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.ex-upcoming-btn a:hover{
+.ex-upcoming-btn .abtn:hover{
 	background:#47555e;
 }
 
@@ -440,9 +440,6 @@ al-post-grid-sec-wrp
 }
 .al-post-grid-inr ul li:nth-child(4n+1){
 	clear: left;
-}
-.al-post-grid-tabs{
-	display: none;
 }
 .al-post-grid-img-overflow{
 	position: relative;

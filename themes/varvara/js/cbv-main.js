@@ -68,7 +68,7 @@ $(window).scroll(function() {
 ----------------------
 */
 
-$('.al-post-grid-tabs:first').show();
+/*$('.al-post-grid-tabs:first').show();
 $('.al-post-grid-tabs-menu ul li:first').addClass('active');
 
 $('.al-post-grid-tabs-menu ul li').on('click',function(){
@@ -77,7 +77,7 @@ $('.al-post-grid-tabs-menu ul li').on('click',function(){
   $(this).addClass('active');
   $('.al-post-grid-tabs').hide();
   $('.al-post-grid-tabs').eq(index).show();
-});
+});*/
 
 
 
