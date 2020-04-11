@@ -138,7 +138,7 @@ if (!function_exists('add_custom_box_product_summary')) {
         if ($product->get_price() <= 0){
             echo '<button type="button" class="btn" data-toggle="modal" data-target="#enquire_modal">enquire</button>';
         }else{
-            echo '<div class="pricehtml"><strong class="price">'.$product->get_price_html().'</strong></div>';
+            echo '<div class="pricehtml"><strong class="price">Price:</strong> '.$product->get_price_html().'</div>';
             echo '<a href="'.esc_url(home_url( '/' )).'checkout/?add-to-cart='.get_the_ID().'" class="btn btn-primary">'.__('Purchase!', 'your-domain').'</a>';
         }
         echo '<div class="share-article">
