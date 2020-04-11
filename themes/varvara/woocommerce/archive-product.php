@@ -18,11 +18,27 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
-$query = new WP_Query(array( 
-	'post_type'=> 'product',
-	'posts_per_page' => 12,
-	) 
-);
+$shopID = get_option( 'woocommerce_shop_page_id' );
+$sorting = '';
+if(isset($_COOKIE['sorting']) && !empty($_COOKIE['sorting'])) {
+	$sorting = $_COOKIE['sorting'];
+}
+
+
+  $query = new WP_Query(array( 
+    'post_type'=> 'product',
+    'posts_per_page' => 1,
+    'paged' => $paged,
+    'order'=> $sorting,
+    's' => $keyword,
+    'tax_query' => $termQuery,
+    'meta_query' => $metaQuery
+  ) 
+  );
+
+
+if( !empty($shopID) ): 
+$page = get_post( $shopID ); 
 ?>
 
 <section class="fl-page-bnr" style="background: url('<?php bloginfo('template_directory'); ?>/img/fl-page-banner.jpg');">
@@ -30,14 +46,14 @@ $query = new WP_Query(array(
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="fl-page-bnr-des">
-					<h1 class="fl-page-bnr-title">Shop title here</h1>
-					<p>A mini description about this section</p>
+					<h1 class="fl-page-bnr-title"><?php echo $page->post_title; ?></h1>
+					<?php echo wpautop($page->post_content); ?>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
+<?php endif; ?>
 <section class="product-archive">
 	<div class="content-wrap">
 		<div class="container-fluid">
@@ -79,13 +95,11 @@ $query = new WP_Query(array(
 				</div>
 				<div class="filter-rgt fl-filter-cntlr clearfix">
 				   <div class="drop-filter filter-4">
-					   <form>
-					   		<select class="selectpicker">
-			                  <option selected="selected">SORT BY</option>
-			                   <option>DESC</option>
-			                   <option>ASC</option>
-			                </select> 
-					   </form>
+					    <select id="sortproduct" data-url="<?php echo get_permalink($shopID); ?>">
+						    <option selected="selected">SORT BY</option>
+			                <option value="desc" <?php echo ($sorting == 'desc')? 'selected="selected"': '';?>>DESC</option>
+			                <option value="asc" <?php echo ($sorting == 'asc')? 'selected="selected"': '';?>>ASC</option>
+		                </select>
 				   </div>
 				</div>
 			</div>
