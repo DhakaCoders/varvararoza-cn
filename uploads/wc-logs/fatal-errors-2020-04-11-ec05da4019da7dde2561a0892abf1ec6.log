@@ -232,3 +232,9 @@ Stack trace:
 #3 {main}
   thrown in F:\xampp\htdocs\2020\varvararoza-wp\varvararoza-cn\themes\varvara\artists-list-single.php on line 57
 
+2020-04-11T20:35:20+00:00 CRITICAL syntax error, unexpected '}', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\single-art_advisory.php on line 52
+
+2020-04-11T20:35:40+00:00 CRITICAL syntax error, unexpected '}', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\single-art_advisory.php on line 52
+
+2020-04-11T20:45:24+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\single-art_advisory.php on line 120
+
