@@ -136,7 +136,7 @@ if (!function_exists('add_custom_box_product_summary')) {
         endif;
         echo'<div class="price-purchase clearfix">';
         if ($product->get_price() <= 0){
-            echo '<div class="fl-modal-btn"><button type="button" class="" data-toggle="modal" data-target="#enquire_modal">enquire</button></div>';
+            echo '<button type="button" class="btn" data-toggle="modal" data-target="#enquire_modal">enquire</button>';
         }else{
             echo '<div class="pricehtml"><strong class="price">'.$product->get_price_html().'</strong></div>';
             echo '<a href="'.esc_url(home_url( '/' )).'checkout/?add-to-cart='.get_the_ID().'" class="btn btn-primary">'.__('Purchase!', 'your-domain').'</a>';

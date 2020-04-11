@@ -33,11 +33,11 @@ Enqueue Scripts->>
 function cbv_theme_scripts(){
     //include_once( DIR . '/enq-scripts/popper.php' );
     include_once( DIR . '/enq-scripts/bootstrap.php' );
-    include_once( DIR . '/enq-scripts/theme.default.php' );
 }
 
 add_action( 'wp_enqueue_scripts', 'cbv_theme_scripts');
 include_once( DIR . '/inc/wc-functions.php' );
+include_once( DIR . '/inc/product-loadmore.php' );
 include_once( DIR . '/inc/cbv-functions.php' );
 /*
 General Functions

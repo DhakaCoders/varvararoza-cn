@@ -71,6 +71,26 @@
 	
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-	
+        
+		<div class="modal fade enquire_modal" id="enquire_modal" tabindex="-1" role="dialog" aria-labelledby="enquireModalLabel" aria-hidden="true">
+		    <div class="modal-dialog" role="document">
+		      <div class="modal-content">
+		          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		            <span aria-hidden="true"><img src="<?php bloginfo('template_directory'); ?>/img/close-modal.png"></span>
+		          </button>
+
+		        <div class="modal-body">
+		          <div class="fl-enquire-modal-content">
+		          	<h3 class="fl-modal-title">Enquire</h3>
+			          <form>
+			            <input type="text"  placeholder="Your Name">
+			            <input type="email"  placeholder="E-mail">
+			            <input type="submit" value="SEND">
+			          </form>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div> 
 	</body>
 </html>

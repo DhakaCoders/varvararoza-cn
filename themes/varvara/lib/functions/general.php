@@ -114,6 +114,8 @@ function script_enqueues() {
 	wp_enqueue_script( 'vendor', get_template_directory_uri() . '/js/vendor.js', array(), '1.0.0', false );
 	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', false );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.min.css', false, '1.0.0', 'all' );
+	wp_enqueue_style('cbv-main-style', get_template_directory_uri() . '/css/main.css', array(), array(0, 99));
+	wp_enqueue_script('cbv-custom', get_template_directory_uri() . '/js/cbv-main.js', array('jquery'), '1.0.0', true);
 	
 }
 
