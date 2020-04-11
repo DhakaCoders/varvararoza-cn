@@ -1,0 +1,119 @@
+/*
+----------------------
+ art-post-grid-sec-wrp
+----------------------
+*/
+.art-post-grid-sec-wrp{
+	padding-top: 40px;
+	padding-bottom: 200px;
+}
+.art-post-grid-wrp{
+	max-width: 1250px;
+	width: 100%;
+	margin: 0 auto;
+}
+.art-post-grid-wrp ul{
+	list-style: none;
+	margin: 0 -18px;
+	padding: 0;
+}
+.art-post-grid-wrp ul li{
+	float: left;
+	width: 33.3333%;
+	padding: 0 18px 70px;
+}
+.art-post-grid-img{
+	height: 273px !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: center center !important;
+	position: relative;
+}
+.art-post-grid-dsc{
+	padding: 10px 30px 15px 35px;
+	position: relative;
+}
+.art-post-grid-dsc:after{
+	content: "";
+	position: absolute;
+	left: 15px;
+	top: -38px;
+	bottom: 0;
+	width: 1px;
+	height:200px;
+	background: #000;
+}
+.art-post-grid-dsc span{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 11px;
+	line-height: 13px;
+	color: #000;
+	font-weight: 400;
+	padding-bottom: 13px;
+}
+.art-post-grid-tilte{
+	font-size: 18px;
+	line-height: 22px;
+	font-family: 'CrimsonText-Bold';
+	margin-bottom: 15px;
+}
+.art-post-grid-tilte a{
+	color: inherit;
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.art-post-grid-tilte a:hover{
+	color: #c6c6c6;
+}
+.art-post-grid-dsc p{
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: 400;
+	margin: 0;
+}
+.art-load-more-btn{
+	text-align: center;
+}
+.art-load-more-btn a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-bottom: 38px;
+	position: relative;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.art-load-more-btn a:after{
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	background: url(../img/down-arrow-fl-more.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 10px 21px;
+	width: 10px;
+	height: 21px;
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.art-load-more-btn a:hover:after{
+	bottom: -5px;
+}
+.art-load-more-btn a:hover{
+	color: #c6c6c6;
+}

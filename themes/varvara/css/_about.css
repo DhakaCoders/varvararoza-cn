@@ -827,25 +827,12 @@ al-post-grid-sec-wrp
   padding-top: 130px;
   padding-bottom: 80px;
 }
-a.head-title-line{
-	height: 320px !important;
-}
-section.global-exhibitions .wide-title .title{
-      padding-left: 70px !important;
-      padding-right: 70px !important;
-  }
+
 
 
 
 @media(max-width: 1199px){
-  .head-title-line .title {
-      padding-left: 90px !important;
-      padding-right: 90px !important;
-  }
-  /*.global-exhibitions .wide-title .title{
-      padding: 60px 40px !important;
-  }*/
-  
+	
 }
 @media(max-width: 991px){
 
