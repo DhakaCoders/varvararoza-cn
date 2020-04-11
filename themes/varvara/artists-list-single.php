@@ -30,7 +30,8 @@ get_header(); ?>
           </div>
           <div class="artist-single-dsc">
             <h5 class="artist-single-title">Artist Bio</h5>
-            <p class="gap-30">Christina Papaioannou is a young upcoming painter from Thessaloniki, Greece.<br>
+            <div class="gap-30"></div>
+            <p>Christina Papaioannou is a young upcoming painter from Thessaloniki, Greece.<br>
             She has an Integrated Master’s degree from Athens School of Fine Arts. <br>
             Her work is in many private collections and has been exhibited across Greece, Cyprus and in London (J/M Gallery, <br>
             Notting Hill, 2019).</p>

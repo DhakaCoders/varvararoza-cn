@@ -68,7 +68,7 @@ $(window).scroll(function() {
 ----------------------
 */
 
-$('.al-post-grid-tabs:first').show();
+/*$('.al-post-grid-tabs:first').show();
 $('.al-post-grid-tabs-menu ul li:first').addClass('active');
 
 $('.al-post-grid-tabs-menu ul li').on('click',function(){
@@ -77,8 +77,63 @@ $('.al-post-grid-tabs-menu ul li').on('click',function(){
   $(this).addClass('active');
   $('.al-post-grid-tabs').hide();
   $('.al-post-grid-tabs').eq(index).show();
-});
+});*/
 
+
+if($("#catID").length){
+  var catID = $("#catID").data('termid');
+}
+
+function catId(){
+  if(catID != '')
+    return catID;
+  else
+    return false;
+}
+
+
+$("#loadMore").on('click', function(e) {
+    e.preventDefault();
+    var catID = '';
+    if(catId() != '') catID = catId();
+    //init
+    var that = $(this);
+    var page = $(this).data('page');
+    var newPage = page + 1;
+    var ajaxurl = that.data('url');
+    //ajax call
+    $.ajax({
+        url: ajaxurl,
+        type: 'post',
+        data: {
+            page: page,
+            cat_id: catID,
+            el_li: 'not',
+            action: 'ajax_products_script_load_more'
+        },
+        beforeSend: function ( xhr ) {
+            $('#ajxaloader').show();
+             
+        },
+        
+        success: function(response ) {
+            //check
+            console.log(response);
+            if (response  == 0) {
+                $('.fl-load-more-btn').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
+                $('.fl-load-more-btn').hide();
+                $('#ajxaloader').hide();
+            } else {
+                $('#ajxaloader').hide();
+                that.data('page', newPage);
+                $('#ajax-content').append(response.substr(response.length-1, 1) === '0'? response.substr(0, response.length-1) : response);
+            }
+        },
+        error: function(response ) {
+            console.log('asdfsd');
+        },
+    });
+});
 
 
 })(jQuery);

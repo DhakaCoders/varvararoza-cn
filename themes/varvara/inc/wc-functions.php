@@ -100,27 +100,47 @@ if (!function_exists('add_custom_box_product_summary')) {
         global $product, $woocommerce, $post;
         $sh_desc = '';
         if( !empty($sh_desc) ) $sh_desc = $sh_desc;
-        $sh_desc = $product->get_short_description();
-        
+        $sh_desc = $product->get_description();
+
+        $proinfo = get_field('productsec', get_the_ID());
+        $spacifics = $proinfo['size'];
+        $artistID = $proinfo['artist'];
+
         echo '<div class="pro-details-pro-title">';
         echo '<strong>'.$product->get_title().'</strong>';
-        echo '<div class="taxo">
-        	<span class="taxo1">Oil on Canvas</span>
-        	<span class="taxo2">Artist name</span>
-        </div>';
+        echo '<div class="taxo">';
+            if( !empty($proinfo['material']) ) printf('<span class="taxo1">%s</span>', $proinfo['material']);
+            if( !empty($artistID) ):
+                $artist = get_post( $artistID );
+                if( $artist ):
+                    printf('<span class="taxo2">%s</span>', $artist->post_title);
+                endif;
+            endif;
+        echo '</div>';
         echo '</div>';
         echo '<div class="description">';
         echo '<h2>Description</h2>';
         echo wpautop( $sh_desc, true );
         echo '</div>';
+        if( !empty($proinfo) ):
         echo'<div class="wc-attributes clearfix">';
-        echo '<span><strong>Matarial:</strong> Oil, Canvas</span>';
-        echo '<span><strong>Size:</strong> 00cm x 00cm</span>';
-        echo '<span><strong>Created:</strong> 2015</span>';
+        if( !empty($proinfo['material']) ) printf('<span><strong>Matarial:</strong> %s</span>', $proinfo['material']);
+            if( !empty($proinfo) ):
+                echo '<span><strong>Size:</strong>';
+                if( !empty($spacifics['width']) ) printf(' %s%s', $spacifics['width'], $spacifics['sizename']);
+                if( !empty($spacifics['height']) ) printf(' x %s%s', $spacifics['height'], $spacifics['sizename']);
+                echo '</span>';
+            endif;
+        if( !empty($proinfo['created']) ) printf('<span><strong>Created:</strong> %s</span>', $proinfo['created']);
         echo '</div>';
+        endif;
         echo'<div class="price-purchase clearfix">';
-        echo '<div class="pricehtml"><strong class="price">'.$product->get_price_html().'</strong></div>';
-        echo '<a href="'.esc_url(home_url( '/' )).'checkout/?add-to-cart='.get_the_ID().'" class="btn btn-primary">'.__('Purchase!', 'your-domain').'</a>';
+        if ($product->get_price() <= 0){
+            echo '<button type="button" class="btn" data-toggle="modal" data-target="#enquire_modal">enquire</button>';
+        }else{
+            echo '<div class="pricehtml"><strong class="price">'.$product->get_price_html().'</strong></div>';
+            echo '<a href="'.esc_url(home_url( '/' )).'checkout/?add-to-cart='.get_the_ID().'" class="btn btn-primary">'.__('Purchase!', 'your-domain').'</a>';
+        }
         echo '<div class="share-article">
         <strong>Share this article</strong>
         </div>';
