@@ -129,6 +129,34 @@
 }
 
 
+/*
+----------------------------
+art-article-content-sec-wrp
+----------------------------
+*/
+.art-article-content-block{
+	max-width: 1130px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 55px 65px 55px;
+	background:#fff;
+}
+.art-article-fl-img{
+	height: 445px !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: cover !important;
+}
+.art-article-dsc{
+	padding: 60px 40px 20px;
+}
+.art-article-dsc p{
+	font-size: 16px;
+	line-height: 34px;
+	margin-bottom: 35px;
+}
+
+
 @media(max-width: 1399px){
 	.art-post-grid-dsc p br{
 		display: none;
