@@ -1,3 +1,8 @@
+
+body.single-product .content-area .product .backbtn{
+	padding-top: 55px;
+	padding-bottom: 35px;
+}
 .thumbnail-items {
     float: left;
     width: 18%;
@@ -98,4 +103,11 @@ body .woocommerce-product-gallery {
 	background: transparent;
 	color: #000!important;
 	border-color: #000!important;
+}
+.single-product .wide-title .title{
+	text-transform: uppercase;
+}
+
+.related-products{
+	margin-bottom: 100px;
 }
