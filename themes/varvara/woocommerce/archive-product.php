@@ -98,9 +98,9 @@ $query = new WP_Query(array(
 		        </div>
 		        <div class="fl-product-grd-des">
 			        <h5 class="fl-product-grd-title"><a href="<?php echo get_permalink( $product->get_id() ); ?>"><?php echo get_the_title(); ?></a></h5>
-			        <div class="taxo">
-			        	<span class="taxo1">Oil on Canvas</span>
-			        	<span class="taxo2">Artist name</span>
+			        <div class="fl-taxo">
+			        	<span class="fl-taxo1">Oil on Canvas</span>
+			        	<span class="fl-taxo2">Artist name</span>
 			        </div>
 		        </div>
 		        <div class="wc-enquire">
