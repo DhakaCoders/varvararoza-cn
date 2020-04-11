@@ -7,7 +7,7 @@ function products_script_load_more($args = array()) {
   $sorting =$termid = '';
   $ccat = get_queried_object();
   if( $ccat ) $termid = @$ccat->term_id;
-  if( isset($_GET['sorting']) && !empty($_GET['sorting'])) $sorting = $_GET['sorting'];
+  if( isset($_COOKIE['sorting']) && !empty($_COOKIE['sorting'])) $sorting = $_COOKIE['sorting'];
 
   echo '<ul class="product-lists clearfix" id="ajax-content">';
       ajax_products_script_load_more($args, $termid, $sorting);
