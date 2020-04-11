@@ -1,4 +1,4 @@
-$(document).ready(function() {
+(function($) {
 
 
 
@@ -81,4 +81,4 @@ $('.al-post-grid-tabs-menu ul li').on('click',function(){
 
 
 
-});
+})(jQuery);
