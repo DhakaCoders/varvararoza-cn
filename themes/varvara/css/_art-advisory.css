@@ -7,20 +7,29 @@
 	padding-top: 40px;
 	padding-bottom: 200px;
 }
-.art-post-grid-wrp{
+.art-post-grid-block{
 	max-width: 1250px;
 	width: 100%;
 	margin: 0 auto;
 }
+.art-post-grid-block .filter-rgt {
+    float: right !important;
+    width: 100% !important;
+}
+.art-post-grid-block .fl-filter-cntlr .drop-filter {
+    margin-bottom: 28px !important;
+    float: right !important;
+    margin-right: 10px !important;
+}
 .art-post-grid-wrp ul{
 	list-style: none;
-	margin: 0 -18px;
+	margin: 0 -15px;
 	padding: 0;
 }
 .art-post-grid-wrp ul li{
 	float: left;
 	width: 33.3333%;
-	padding: 0 18px 70px;
+	padding: 0 15px 70px;
 }
 .art-post-grid-img{
 	height: 273px !important;
@@ -30,17 +39,17 @@
 	position: relative;
 }
 .art-post-grid-dsc{
-	padding: 10px 30px 15px 35px;
+	padding: 10px 30px 15px 30px;
 	position: relative;
+	letter-spacing: 0.3px;
 }
 .art-post-grid-dsc:after{
 	content: "";
 	position: absolute;
 	left: 15px;
-	top: -38px;
 	bottom: 0;
 	width: 1px;
-	height:200px;
+	height:222px;
 	background: #000;
 }
 .art-post-grid-dsc span{
@@ -75,6 +84,7 @@
 	line-height: 22px;
 	font-weight: 400;
 	margin: 0;
+	letter-spacing: 0.3 !important;
 }
 .art-load-more-btn{
 	text-align: center;
@@ -116,4 +126,66 @@
 }
 .art-load-more-btn a:hover{
 	color: #c6c6c6;
+}
+
+
+@media(max-width: 1399px){
+	.art-post-grid-dsc p br{
+		display: none;
+	}
+}
+@media(max-width: 1199px){
+	.art-post-grid-dsc {
+	    padding: 10px 20px 15px 30px;
+	}
+	.art-post-grid-sec-wrp {
+	    padding-bottom: 170px;
+	}
+	.art-post-grid-tilte a br{
+		display: none;
+	}
+}
+
+
+@media(max-width: 991px){
+	.art-post-grid-wrp ul li {
+	    width: 50%;
+	    padding: 0 15px 40px;
+	}
+	.art-post-grid-sec-wrp {
+	    padding-bottom: 140px;
+	}
+}
+
+@media(max-width: 767px){
+	.art-post-grid-sec-wrp {
+	    padding-bottom: 110px;
+	}
+	.art-post-grid-wrp ul li {
+	    width: 100%;
+	    padding: 0 15px 60px;
+	}
+	.art-post-grid-dsc:after{
+		height: 185px;
+	}
+}
+
+@media(max-width: 639px){
+	
+}
+
+@media(max-width: 479px){
+	.art-post-grid-sec-wrp {
+	    padding-bottom: 90px;
+	}
+	.art-post-grid-dsc:after {
+	    top: 0;
+	    bottom: 0;
+	    height: 100%;
+	}
+
+}
+
+@media(max-width: 359px){
+	
 }
