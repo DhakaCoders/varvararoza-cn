@@ -561,10 +561,9 @@ al-post-grid-sec-wrp
 .artist-single-dsc a:hover:before{
 	right: -5px;
 }
-.about-section2{
-	padding-top: 130px;
-	padding-bottom: 80px;
-}
+
+
+
 
 /*
 ----------------
@@ -817,5 +816,60 @@ al-post-grid-sec-wrp
 }
 
 @media(max-width: 359px){
+
+}
+
+
+/*
+-------------------
+ New Css
+-------------------
+*/
+
+.about-section2{
+  padding-top: 130px;
+  padding-bottom: 80px;
+}
+a.head-title-line{
+	height: 320px !important;
+}
+
+
+
+
+@media(max-width: 1199px){
+  .head-title-line .title {
+      padding-left: 90px !important;
+      padding-right: 90px !important;
+  }
+  /*.global-exhibitions .wide-title .title{
+      padding: 60px 40px !important;
+  }*/
+  section.global-exhibitions .title {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+  section.global-exhibitions .wide-title .title{
+      padding-left: 70px !important;
+      padding-right: 70px !important;
+  }
+}
+@media(max-width: 991px){
+
+}
+@media(max-width: 767px){
+  .global-exhibitions .title {
+      padding: 40px 25px !important;
+  }
+  .global-exhibitions .wide-title .line {
+      -ms-flex: 0 0 27%;
+      flex: 0 0 27%;
+      max-width: 27%;
+  } 
+}
+@media(max-width: 575px){
+
+}
+@media(max-width: 479px){
 
 }

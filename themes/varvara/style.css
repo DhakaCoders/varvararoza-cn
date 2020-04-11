@@ -2617,6 +2617,10 @@ input[type="button"].btn-block {
     left: 0; } }
 
 @media (min-width: 1200px) {
+  section.global-exhibitions .title{
+      padding-left: 70px !important;
+      padding-right: 70px !important;
+  }
   .dropdown-menu-xl-left {
     right: auto;
     left: 0; } }
@@ -9641,3 +9645,6 @@ ins {
     height: auto; } }
 
 /*# sourceMappingURL=style.css.map */
+
+
+

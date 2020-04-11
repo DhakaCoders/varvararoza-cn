@@ -139,7 +139,7 @@ get_header(); ?>
 
 						        <?php foreach( $images as $image ): ?>
 						        	<?php $size = 'aboutgallery'; $thumb = $image['sizes'][ $size ]; ?>
-						        	<a href="<?php echo get_field('gallery_link'); ?> " class="col-md-3 image-col" style="background-image:url(<?php echo $thumb; ?>)">
+						        	<a href="<?php echo get_field('gallery_link'); ?> " class="col-md-3 image-col head-title-line" style="background-image:url(<?php echo $thumb; ?>)">
 						        		<div class="overlay">
 
 						        			<span>View gallery images<img alt="right arrow" class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/right-arrow.svg"></span>
