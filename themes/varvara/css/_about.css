@@ -830,7 +830,10 @@ al-post-grid-sec-wrp
 a.head-title-line{
 	height: 320px !important;
 }
-
+section.global-exhibitions .wide-title .title{
+      padding-left: 70px !important;
+      padding-right: 70px !important;
+  }
 
 
 
@@ -842,14 +845,7 @@ a.head-title-line{
   /*.global-exhibitions .wide-title .title{
       padding: 60px 40px !important;
   }*/
-  section.global-exhibitions .title {
-	    padding-left: 0;
-	    padding-right: 0;
-	}
-  section.global-exhibitions .wide-title .title{
-      padding-left: 70px !important;
-      padding-right: 70px !important;
-  }
+  
 }
 @media(max-width: 991px){
 
