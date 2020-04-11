@@ -126,5 +126,14 @@ if ( post_password_required() ) {
 		</li>
 		<?php endwhile; ?>
 	</ul>
+	<div class="fl-social-icons">
+		<strong>Share this Article</strong>
+		<ul class="clearfix ulc">
+			<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a></li>
+			<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/instagram.png"></a></li>
+			<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a></li>
+			<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/envelope.png"></a></li>
+		</ul>
+	</div>
 </div>	
 <?php do_action( 'woocommerce_after_single_product' ); ?>
