@@ -103,8 +103,8 @@ if (!function_exists('add_custom_box_product_summary')) {
         $sh_desc = $product->get_description();
 
         $proinfo = get_field('productsec', get_the_ID());
+        $artistID = get_field('artist', get_the_ID());
         $spacifics = $proinfo['size'];
-        $artistID = $proinfo['artist'];
 
         echo '<div class="pro-details-pro-title">';
         echo '<strong>'.$product->get_title().'</strong>';
