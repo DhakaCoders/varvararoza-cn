@@ -326,7 +326,9 @@ pagination css
 	justify-content: center;
 	color: #000;
 }
-
+.art-page-banner .page-banner-des{
+	padding-bottom: 60px;
+}
 .page-banner-title{
 	font-size: 75px;
 	font-weight: 600;
@@ -335,6 +337,14 @@ pagination css
 	color: #000;
 	font-family: 'Crimson Text', sans-serif;
 	text-align: center;
+}
+.art-page-banner .page-banner-title{
+	font-size: 34px !important;
+	line-height: 42px !important;
+	margin-bottom: 30px;
+}
+.art-page-banner .page-banner-des a{
+	margin-bottom: 15px !important;
 }
 .page-banner-des p{
 	font-size: 11px;
@@ -579,6 +589,9 @@ al-post-grid-sec-wrp
 	.page-banner-title{
 		font-size: 70px;
 	}
+	.page-banner-title br{
+		display: none;
+	}
 
 }
 
@@ -645,6 +658,11 @@ al-post-grid-sec-wrp
 	    padding-top: 50px;
 	    padding-bottom: 85px;
 	}
+	.art-page-banner .page-banner-title {
+	    font-size: 32px !important;
+	    line-height: 38px !important;
+	}
+}
 
 @media(max-width: 767px){
 	.about-interview-slide-dsc {
@@ -717,6 +735,11 @@ al-post-grid-sec-wrp
 	.artist-single-sec-wrp {
 	    padding-top: 50px;
 	    padding-bottom: 70px;
+	}
+	.art-page-banner .page-banner-title {
+	    font-size: 30px !important;
+	    line-height: 36px !important;
+	    margin-bottom: 25px;
 	}
 
 }
