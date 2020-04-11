@@ -20,3 +20,6 @@ body .woocommerce-product-gallery {
 .summary.entry-summary {
     width: 40% !important;
 }
+.related-products{
+	position: relative;
+}

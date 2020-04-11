@@ -2,22 +2,24 @@
 /*
 Template Name:Art Advisory
 */
-get_header();?>
-
-
+get_header();
+$thisID = 341;
+if( !empty($thisID) ): 
+$page = get_post( $thisID ); 
+?>
 <section class="page-banner">
   <div class="page-banner-controller" style="overflow: hidden;">
     <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/img/page-bnr.jpg);">
     </div>
     <div class="page-banner-des">
         <div>
-          <h1 class="page-banner-title">Art Advisory</h1>
-          <p>A mini description about this section</p>
+          <h1 class="page-banner-title"><?php echo $page->post_title; ?></h1>
+          <?php echo wpautop($page->post_content); ?>
         </div>
     </div>
   </div>
 </section><!-- end of page-banner -->
-
+<?php endif; ?>
 <section class="art-post-grid-sec-wrp">
 	<div class="container-fluid">
 	  <div class="row">

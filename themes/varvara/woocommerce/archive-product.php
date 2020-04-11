@@ -24,19 +24,6 @@ if(isset($_COOKIE['sorting']) && !empty($_COOKIE['sorting'])) {
 	$sorting = $_COOKIE['sorting'];
 }
 
-
-  $query = new WP_Query(array( 
-    'post_type'=> 'product',
-    'posts_per_page' => 1,
-    'paged' => $paged,
-    'order'=> $sorting,
-    's' => $keyword,
-    'tax_query' => $termQuery,
-    'meta_query' => $metaQuery
-  ) 
-  );
-
-
 if( !empty($shopID) ): 
 $page = get_post( $shopID ); 
 ?>

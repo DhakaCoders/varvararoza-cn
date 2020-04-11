@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'clearfix', $product ); ?>>
 
 	<?php
 	/**
@@ -72,5 +72,59 @@ if ( post_password_required() ) {
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
 </div>
+<?php
+	$query = new WP_Query(array( 
+		'post_type'=> 'product',
+		'posts_per_page' => 4,
+		'orderby' => 'date',
+		'order' => 'desc',
+		) 
+	);	
+	?>
 
+<div class="related-products clearfix">
+	<div class="wide-title"><div class="line"></div>
+		<div class="title">Related Products</div>
+		<div class="line"></div>
+	</div>
+	<ul class="product-lists clearfix">
+		<?php 
+		$product_thumb = '';
+		while($query->have_posts()): $query->the_post(); 
+		global $product, $woocommerce, $post;
+		$thumb_id = get_post_thumbnail_id($product->get_id());
+		if(!empty($thumb_id)){
+		    $product_thumb = cbv_get_image_tag($thumb_id, 'prodgrid');
+		}
+		?>
+		<li class="product-list gallery-col">
+
+		<div class="product-grid-inr">
+		<div class="fl-product-grd-img"><a href="<?php echo get_permalink( $product->get_id() ); ?>" class="overlay-link"></a>
+		<?php echo $product_thumb; ?>
+		</div>
+		<div class="fl-product-grd-des">
+		    <h5 class="fl-product-grd-title"><a href="<?php echo get_permalink( $product->get_id() ); ?>"><?php echo get_the_title(); ?></a></h5>
+		    <div class="fl-taxo">
+		    	<span class="fl-taxo1">Oil on Canvas</span>
+		    	<span class="fl-taxo2">Artist name</span>
+		    </div>
+		</div>
+		<div class="wc-enquire">
+			<?php
+			 if ($product->get_price() <= 0){
+			?>
+			<a href="#">Enquire</a>
+			<?php }else{ ?>
+				<div class="loop-price">
+		         	<strong class="price-label">Price:</strong><?php echo $product->get_price_html(); ?>
+		        </div>
+			<?php } ?>
+		</div>
+		 
+		</div>
+		</li>
+		<?php endwhile; ?>
+	</ul>
+</div>	
 <?php do_action( 'woocommerce_after_single_product' ); ?>
