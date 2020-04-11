@@ -25,8 +25,17 @@ $query = new WP_Query(array(
 );
 ?>
 
-<section >
-	
+<section class="fl-page-bnr" style="background: url('<?php bloginfo('template_directory'); ?>/img/fl-page-banner.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="fl-page-bnr-des">
+					<h1 class="fl-page-bnr-title">Shop title here</h1>
+					<p>A mini description about this section</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <section class="product-archive">
@@ -119,29 +128,34 @@ $query = new WP_Query(array(
 		      </li>
 		      <?php endwhile; ?>
 		    </ul>
+		    <div class="fl-load-more-btn">
+		    	<a href="#">LOAD MORE</a>
+		    </div>
 		</div>
 	</div>
 </section>
 
-<div class="fl-modal-btn">
-	<button type="button" class="" data-toggle="modal" data-target="#enquire_modal">enquire</button>
+<div class="fl-modal-btn text-center">
+	<button type="button" class="btn" data-toggle="modal" data-target="#enquire_modal">enquire</button>
 </div>
+<div style="height: 50px;"></div>
 
-<div class="modal fade" id="enquire_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade enquire_modal" id="enquire_modal" tabindex="-1" role="dialog" aria-labelledby="enquireModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true"><img src="<?php bloginfo('template_directory'); ?>/img/close-modal.png"></span>
           </button>
 
         <div class="modal-body">
-          <span class="modal-bx-title">login to your account</span>
-          <form>
-            <input type="text"  placeholder="Your phone number">
-            <input type="password"  placeholder="Your password">
-            <div class="text-center"><a class="forgot-title" href="#">Forgot password?</a></div>
-            <input type="submit" value="LOGIN">
-          </form>
+          <div class="fl-enquire-modal-content">
+          	<h3 class="fl-modal-title">Enquire</h3>
+	          <form>
+	            <input type="text"  placeholder="Your Name">
+	            <input type="email"  placeholder="E-mail">
+	            <input type="submit" value="SEND">
+	          </form>
+          </div>
         </div>
       </div>
     </div>
