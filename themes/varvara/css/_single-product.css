@@ -127,7 +127,7 @@ body .woocommerce-product-gallery {
 	vertical-align: baseline;
 }
 .fl-social-icons ul{
-	margin-left: auto;
+	padding-left: 35px;
 }
 .fl-social-icons ul li{
 	display: inline-block;
@@ -157,4 +157,11 @@ body .woocommerce-product-gallery {
     font-weight: 800;
     font-size: 15px;
     line-height: 1;
+}
+.backbtn{
+	padding-left: 140px;
+}
+
+.backbtn a span{
+	padding-left: 5px;
 }
