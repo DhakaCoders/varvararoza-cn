@@ -214,3 +214,9 @@ Stack trace:
 #4 {main}
   thrown in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\product-loadmore.php on line 32
 
+2020-04-11T20:35:20+00:00 CRITICAL syntax error, unexpected '}', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\single-art_advisory.php on line 52
+
+2020-04-11T20:35:40+00:00 CRITICAL syntax error, unexpected '}', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\single-art_advisory.php on line 52
+
+2020-04-11T20:45:24+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\single-art_advisory.php on line 120
+

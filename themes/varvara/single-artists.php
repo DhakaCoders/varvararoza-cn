@@ -46,7 +46,6 @@ endif;
             <h5 class="artist-single-title">Artist Bio</h5>
             <div class="gap-30"></div>
             <?php the_content(); ?>
-            <a href="#">Read more</a>
           </div>
         </div>
       </div>
