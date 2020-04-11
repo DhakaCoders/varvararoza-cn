@@ -58,48 +58,45 @@ get_header(); ?>
 			</section>
 
 
+			<?php 
+				$sec2 = get_field('sec2', get_the_ID());
+				if($sec2): 
+					$interviews = $sec2['interviews'];
+			?>
 			<section class="about-interview-sec-wrp">
 			  <div class="container-fluid">
 				<div class="row">
 				  <div class="col-sm-12">
-				  	<div class="wide-title" data-aos="fade"><div class="line"></div><div class="title">interviews</div><div class="line"></div></div>
+				  	<?php if( !empty($sec2['title']) ): ?>
+				  	<div class="wide-title" data-aos="fade"><div class="line"></div>
+				  	<div class="title"><?php echo $sec2['title']; ?></div>
+				  	<div class="line"></div>
+				    </div>
+					<?php endif; ?>
+					<?php if( $interviews ): ?>
 				  	 <div class="about-interview-slider-wrp">
 				  	   <div class="AboutInterviewSlider">
+				  	   	<?php 
+				  	   		foreach( $interviews as $interview ): 
+				  	   	?>
 				  	   	<div class="about-interview-slide-item">
 				  	   	  <div class="about-interview-slide-dsc">
-				  	   	  	<span>6th november</span>
-				  	   	  	<h3>Lorem ipsum title</h3>
-				  	   	  	<a href="#">READ MORE</a>
+				  	   	  	<?php if( !empty($interview['date']) ) printf('<span>%s</span>', date('jS F', strtotime($interview['date']))) ?>
+				  	   	  	<?php if( !empty($interview['title']) ) printf('<h3>%s</h3>', $interview['title']) ?>
+				  	   	  	<?php if( !empty($interview['link']) ): ?>
+				  	   	  	<a href="<?php echo $interview['link']; ?>">READ MORE</a>
+				  	   	  	<?php endif; ?>
 				  	   	  </div>
 				  	   	</div>
-				  	   	<div class="about-interview-slide-item">
-				  	   	  <div class="about-interview-slide-dsc">
-				  	   	  	<span>6th november</span>
-				  	   	  	<h3>Lorem ipsum title</h3>
-				  	   	  	<a href="#">READ MORE</a>
-				  	   	  </div>
-				  	   	</div>
-				  	   	<div class="about-interview-slide-item">
-				  	   	  <div class="about-interview-slide-dsc">
-				  	   	  	<span>6th november</span>
-				  	   	  	<h3>Lorem ipsum title</h3>
-				  	   	  	<a href="#">READ MORE</a>
-				  	   	  </div>
-				  	   	</div>
-				  	   	<div class="about-interview-slide-item">
-				  	   	  <div class="about-interview-slide-dsc">
-				  	   	  	<span>6th november</span>
-				  	   	  	<h3>Lorem ipsum title</h3>
-				  	   	  	<a href="#">READ MORE</a>
-				  	   	  </div>
-				  	   	</div>
+				  	   <?php endforeach; ?>
 				  	   </div>
 				  	   </div>
+				  	   <?php endif; ?>
 				  	 </div>
 				  </div>
 				</div>
-			  </div>
 			</section>
+			<?php endif; ?>
 
 
 			<section class="about-section2"  style="<?php $image = get_field('section2_image'); $size = 'aboutbg'; $thumb = $image['sizes'][ $size ]; if ($image) { ?>background-image: url(<?php echo $thumb;?>); <?php } else { ?> background-color:black <?php } ?>">
