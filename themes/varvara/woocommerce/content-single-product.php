@@ -32,7 +32,7 @@ if ( post_password_required() ) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'clearfix', $product ); ?>>
-	<div class="backbtn"><a href="javascript:history.back()">BACK</a></div>
+	<div class="backbtn"><a href="javascript:history.back()"><img src="<?php bloginfo('template_directory'); ?>/img/back-btn-arrow.png"> <span>BACK</span></a></div>
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.

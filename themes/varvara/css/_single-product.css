@@ -1,3 +1,8 @@
+
+body.single-product .content-area .product .backbtn{
+	padding-top: 55px;
+	padding-bottom: 35px;
+}
 .thumbnail-items {
     float: left;
     width: 18%;
@@ -93,9 +98,70 @@ body .woocommerce-product-gallery {
 	text-transform: uppercase;
 	font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    margin-bottom: 35px;
 }
 .price-purchase > a:hover{
 	background: transparent;
 	color: #000!important;
 	border-color: #000!important;
+}
+.single-product .wide-title .title{
+	text-transform: uppercase;
+}
+
+.related-products{
+	margin-bottom: 100px;
+}
+
+.fl-social-icons{
+	display: flex;
+	align-items: center;
+}
+.fl-social-icons strong{
+	font-weight: normal;
+	font-family: 'CrimsonText-Regular';
+	color: #3C3C3C;
+	font-size: 16px;
+	line-height: 1;
+	display: inline-block;
+	vertical-align: baseline;
+}
+.fl-social-icons ul{
+	padding-left: 35px;
+}
+.fl-social-icons ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	margin-right: 20px;
+}
+.fl-social-icons ul li:last-child{
+	margin-right: 0;
+}
+.pricehtml{
+	margin-bottom: 25px;
+}
+
+.single-product .pricehtml strong {
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 13px;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    min-width: 55px;
+}
+
+.single-product .pricehtml  .woocommerce-Price-amount.amount{
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1;
+}
+.backbtn{
+	padding-left: 140px;
+}
+
+.backbtn a span{
+	padding-left: 5px;
 }
