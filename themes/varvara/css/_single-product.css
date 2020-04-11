@@ -20,6 +20,9 @@ body .woocommerce-product-gallery {
 .summary.entry-summary {
     width: 40% !important;
 }
+.related-products{
+	position: relative;
+}
 .pro-details-pro-title{
 	border-bottom: 1px solid #D2D2D2;
 	padding-bottom: 15px;
