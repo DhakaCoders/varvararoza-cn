@@ -365,7 +365,7 @@ pagination css
 	text-align: center;
 	text-transform: uppercase;
 }
-.page-banner-des a {
+.page-banner-des a{
     display: table;
     text-decoration: none;
     font-size: 11px;
@@ -376,6 +376,9 @@ pagination css
     text-align: center;
     margin: 0 auto;
     margin-bottom: 7px;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 .page-banner-des a:before{
 	content: "";
@@ -387,6 +390,12 @@ pagination css
 	background-size: 21px 10px;
 	width: 21px;
 	height: 10px;
+	transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.page-banner-des a:hover:before{
+	left: -5px;
 }
 
 /*
@@ -585,7 +594,6 @@ footer.regular-footer .footer-list span{
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 0 10px;
     display: inline-block;
     vertical-align: baseline;
 }
@@ -594,7 +602,13 @@ footer.regular-footer .footer-list span a{
 	vertical-align: baseline;
 	text-decoration: none;
 }
-footer.regular-footer .footer-list span:last-child{
+footer.regular-footer .footer-list svg {
+    margin-right: 0;
+}
+.footer-right span{
+	padding: 0 15px;
+}
+.footer-right span:last-child{
 	padding-right: 0;
 	padding-left: 20px;
 }
@@ -629,9 +643,6 @@ footer.regular-footer .footer-list span:last-child{
 	.ex-upcoming-slide-two-rgt {
 	    padding: 55px 45px 45px;
 	}
-
-	
-	
 
 }
 
@@ -701,6 +712,16 @@ footer.regular-footer .footer-list span:last-child{
 	.art-page-banner .page-banner-title {
 	    font-size: 32px !important;
 	    line-height: 38px !important;
+	}
+	footer.regular-footer .footer-right {
+	    float: none;
+	    clear: both;
+	    text-align: center;
+	}
+	footer.regular-footer .footer-left {
+	    float: none;
+	    clear: both;
+	    text-align: center;
 	}
 	
 }
@@ -797,6 +818,12 @@ footer.regular-footer .footer-list span:last-child{
 	}
 	.page-banner {
 	    padding-top: 70px;
+	}
+	.footer-right span {
+	    padding: 0 5px;
+	}
+	.footer-right span:last-child {
+	    padding-left: 10px;
 	}
 
 	

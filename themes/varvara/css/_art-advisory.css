@@ -31,12 +31,18 @@
 	width: 33.3333%;
 	padding: 0 15px 70px;
 }
+.art-post-grid-img-cntlr{
+	position: relative;
+	overflow: hidden;
+}
 .art-post-grid-img{
 	height: 273px !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 	background-position: center center !important;
-	position: relative;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .art-post-grid-dsc{
 	padding: 10px 30px 15px 30px;

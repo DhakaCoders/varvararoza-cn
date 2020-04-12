@@ -2,3 +2,11 @@
 
 2020-04-12T14:49:54+00:00 CRITICAL syntax error, unexpected '$cart_item_data' (T_VARIABLE) in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\inc\wc-functions.php on line 177
 
+2020-04-12T19:38:48+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in F:\xampp\htdocs\2020\varvararoza-wp\varvararoza-cn\themes\varvara\artists-list-single.php:57
+Stack trace:
+#0 F:\xampp\htdocs\2020\varvararoza-wp\wp-includes\template-loader.php(98): include()
+#1 F:\xampp\htdocs\2020\varvararoza-wp\wp-blog-header.php(19): require_once('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\2020\varvararoza-wp\index.php(17): require('F:\\xampp\\htdocs...')
+#3 {main}
+  thrown in F:\xampp\htdocs\2020\varvararoza-wp\varvararoza-cn\themes\varvara\artists-list-single.php on line 57
+

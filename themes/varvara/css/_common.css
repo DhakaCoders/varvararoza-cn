@@ -17,14 +17,11 @@ a, a:hover, a:focus, button:hover, button:focus{
 body {
 
 }
+.art-post-grid-img:hover,
 a,input,img,textarea,button,svg{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
-}
-.art-post-grid-img{
-	position: relative;
-	overflow: hidden;
 }
 .scale,.fl-product-grd-img:hover img,
 .art-post-grid-img:hover{
