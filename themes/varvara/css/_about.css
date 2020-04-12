@@ -92,6 +92,9 @@ about-interview-sec-wrp
 	font-weight: 700;
 	position: relative;
 	padding-right: 20px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .about-interview-slide-dsc a:before {
     content: "";
@@ -102,9 +105,16 @@ about-interview-sec-wrp
     background-size: 10px 19px;
     width: 10px;
     height: 19px;
+    transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .about-interview-slide-dsc a:hover:before{
 	background:url(../img/angle-icon-hover.png);
+	right: -5px;
+}
+.about-interview-slide-dsc a:hover{
+	color: #c6c6c6;
 }
 
 
@@ -231,7 +241,7 @@ ex-upcoming-slider-sec-wrp
 	-webkit-transition: all 0.5s;
 }
 .ex-upcoming-btn .abtn:hover{
-	background:#47555e;
+	background:#c6c6c6;
 }
 
 
