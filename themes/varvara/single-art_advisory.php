@@ -90,8 +90,9 @@ while( have_posts() ): the_post();
 				    while($query->have_posts()): $query->the_post();
 				      $thumb_id = get_post_thumbnail_id(get_the_ID());
 				      if(!empty($thumb_id)){
-				        $art_thumb = cbv_get_image_src($thumb_id, 'prodgrid');
+				        $art_thumb = cbv_get_image_src($thumb_id, 'artgrid');
 				      }
+				      $excerpt = get_field('overview', get_the_ID());
 	  	  		?>
 	  	  	  <li>
 	  	  	  	<div class="art-post-grid-inr">
@@ -103,7 +104,7 @@ while( have_posts() ): the_post();
 			          <h5 class="art-post-grid-tilte">
 			            <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
 			          </h5>
-			          <?php the_excerpt(); ?>
+			          <?php if( !empty($excerpt['excerpt']) ) echo wpautop( $excerpt['excerpt'] ); ?>
 			        </div>
 		      	</div>
 	  	  	  </li>
