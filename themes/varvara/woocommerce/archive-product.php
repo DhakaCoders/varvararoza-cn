@@ -67,7 +67,7 @@ endif;
 	<div class="content-wrap">
 		<div class="container-fluid">
 			<div class="product-filter clearfix">
-				<div class="filter-lft fl-filter-cntlr clearfix">
+				<div class="fl-filter-cntlr clearfix">
 				   <div class="drop-filter filter-1">
 				   	<form action="" method="get">
 				   		<select name="artist-id" class="drowpdwon-filter" onchange="this.form.submit()">
@@ -137,8 +137,6 @@ endif;
 	                <?php endif; ?>
 	            	</form>
 				   </div>
-				</div>
-				<div class="filter-rgt fl-filter-cntlr clearfix">
 				   <div class="drop-filter filter-4">
 					    <select class="drowpdwon-filter" id="sortproduct">
 						    <option selected="selected" value="">SORT BY</option>
@@ -147,6 +145,9 @@ endif;
 		                </select>
 				   </div>
 				</div>
+				
+				   
+				
 			</div>
 			<?php do_shortcode('[ajax_products]'); ?>
 		</div>

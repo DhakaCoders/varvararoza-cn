@@ -99,6 +99,7 @@ if (!function_exists('add_custom_box_product_summary')) {
     function add_custom_box_product_summary() {
         global $product, $woocommerce, $post;
         $sh_desc = '';
+        $page_url = get_permalink();
         if( !empty($sh_desc) ) $sh_desc = $sh_desc;
         $sh_desc = $product->get_description();
 
@@ -144,10 +145,10 @@ if (!function_exists('add_custom_box_product_summary')) {
     echo '<div class="fl-social-icons">
         <strong>Share this Article</strong>
         <ul class="clearfix ulc">
-            <li><a href="#"><img src="'.THEME_URI.'/img/facebook.png"></a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u='.$page_url.'"><img src="'.THEME_URI.'/img/facebook.png"></a></li>
             <li><a href="#"><img src="'.THEME_URI.'/img/instagram.png"></a></li>
-            <li><a href="#"><img src="'.THEME_URI.'/img/twitter.png"></a></li>
-            <li><a href="#"><img src="'.THEME_URI.'/img/envelope.png"></a></li>
+            <li><a href="https://twitter.com/home?status='.$page_url.'"><img src="'.THEME_URI.'/img/twitter.png"></a></li>
+            <li><a href="mailto:info@example.com?&subject=&body='.$page_url.'"><img src="'.THEME_URI.'/img/envelope.png"></a></li>
         </ul>
     </div>';
         echo'</div>';

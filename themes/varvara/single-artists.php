@@ -59,6 +59,12 @@ endif;
     'posts_per_page' => 4,
     'orderby' => 'date',
     'order' => 'desc',
+    'meta_query' => array(array(
+            'key'     => 'artist',
+            'value'   => get_the_ID(),
+            'compare' => '=',
+        )
+      ),
     ) 
   );  
   if( $query->have_posts() ):
@@ -111,7 +117,7 @@ endif;
     ?>
   </ul>
   <div class="allproducts">
-    <a class="btn" href="<?php echo get_permalink($shopID); ?>">All Products</a>
+    <a href="<?php echo get_permalink($shopID); ?>">All Products</a>
   </div>
 </section> 
 <?php endif; wp_reset_postdata(); ?> 

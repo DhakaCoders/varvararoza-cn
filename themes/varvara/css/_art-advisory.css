@@ -196,6 +196,26 @@ art-article-content-sec-wrp
 	color: #000;
 	padding: 0 14px;
 }
+.allproducts a {
+    padding-bottom: 0;
+    font-size: 13px;
+    line-height: 15px;
+    max-width: 252px;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px 20px;
+    display: inline-block;
+    vertical-align: baseline;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.allproducts {
+    text-align: center;
+}
 
 /*
 ---------------------------

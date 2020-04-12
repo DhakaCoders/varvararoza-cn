@@ -23,6 +23,8 @@ if( !function_exists('cbv_theme_setup') ){
 		add_image_size( 'artistgrid', 250, 255, true );
 		add_image_size( 'exhgrid', 536, 370, true );
 		add_image_size( 'artgrid', 388, 274, true );
+		add_image_size( 'artgallery', 320, 260, true );
+		add_image_size( 'plategrid', 1000, 446, true );
 	}
 
 }
