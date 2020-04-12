@@ -22,7 +22,12 @@ a,input,img,textarea,button,svg{
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.scale,.fl-product-grd-img:hover img{
+.art-post-grid-img{
+	position: relative;
+	overflow: hidden;
+}
+.scale,.fl-product-grd-img:hover img,
+.art-post-grid-img:hover{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);

@@ -134,6 +134,9 @@ li.product-list:nth-child(4n+1){
     font-weight: 700;
     color: #3C3C3C;
 }
+.fl-product-grd-title a:hover{
+    color: #979797;
+}
 .fl-taxo span{
     display: block;
 }
@@ -392,6 +395,9 @@ li.product-list:nth-child(4n+1){
     .fl-load-more-btn{
         padding-bottom: 0;
         padding-top: 50px;
+    }
+    .fl-page-bnr{
+        margin-top: 71px!important;
     }
 }
 @media(max-width: 639px){

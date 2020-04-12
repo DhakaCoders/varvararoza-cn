@@ -1,3 +1,36 @@
 body.home .masthead{
 	border-bottom: none;
 }
+
+section.page-title .container-fluid .readmore span{
+	display: inline-block;
+	vertical-align: baseline;
+	padding-right: 35px;
+	position: relative;
+}
+section.page-title .container-fluid .readmore span svg{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	right: 0;
+}
+section.page-title .container-fluid .readmore:hover span svg{
+	right: -3px;
+}
+
+body.privacy-policy .content-wrap{
+	padding: 50px 0 70px; 
+}
+body.privacy-policy .content-wrap h1{
+	font-size: 45px;
+	line-height: 1;
+}
+
+
+@media(max-width: 767px){
+	body.privacy-policy .content-wrap h1{
+		font-size: 40px;
+	}
+}

@@ -293,14 +293,19 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 .woo-page-cntlr > h1{
 	font-size: 45px;
 }
-.woocommerce-button.button.woocommerce-form-login__submit{
+.woocommerce-button.button.woocommerce-form-login__submit,
+.woocommerce-Button.woocommerce-button.button.woocommerce-form-register__submit{
 	min-width: 170px;
 }
 .woocommerce-form-login__rememberme{
 	margin-bottom: 0;
 	margin-top: 9px;
 }
-
+.login-title{
+	font-size: 37px!important;
+	line-height: 1;
+	margin-bottom: 15px;
+}
 @media(max-width: 1199px){
 	body.woocommerce-order-received .woocommerce ul.order_details{
 		padding-left: 15px;
@@ -428,6 +433,12 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 	    padding-top: 35px;
 	    padding-bottom: 30px;
 	}
+	.woo-page-cntlr > h1 {
+	    font-size: 40px;
+	}
+	.login-title{
+		font-size: 35px!important;
+	}
 }
 
 
@@ -455,7 +466,22 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 	.fl-social-icons ul li{
 		margin-right: 13px;
 	}
-
+	#wccart-wrapper #coupon_code, #coupon_code{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.woocommerce table.cart td.actions .button{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.woocommerce table.cart td.actions .button {
+	    margin-left: auto;
+	    margin-right: auto;
+	    display: table;
+	    float: none!important;
+	    margin-bottom: 10px;
+	}
 }
 
 
@@ -597,6 +623,7 @@ body.woocommerce-account .woocommerce .u-column2.col-2{
 body.woocommerce-account #customer_login .u-column1.col-1 > h2,
 body.woocommerce-account #customer_login .u-column2.col-2 > h2{
 	font-size: 32px;
+	line-height: 1;
 }
 .woocommerce .woocommerce-billing-fields__field-wrapper .form-row{
 	display: block;
