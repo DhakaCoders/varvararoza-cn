@@ -100,9 +100,12 @@ li.product-list:nth-child(4n+1){
 .filter-lft {
     float: left;
 }
-
-.filter-rgt {
+.drop-filter{
+    margin-right: 30px;
+}
+.drop-filter.filter-4{
     float: right;
+    margin-right: 0;
 }
 
 .drop-filter {
@@ -150,8 +153,8 @@ li.product-list:nth-child(4n+1){
     font-size: 13px;
     -webkit-box-shadow: none;
     box-shadow: none;
-    width: 100%;
-    max-width: 300px; 
+    width: 100%; 
+    max-width: 100%;
 }
 .wc-enquire a{
     color: black !important;
@@ -319,3 +322,105 @@ li.product-list:nth-child(4n+1){
     height: 50px;
     border-radius: 4px;
 }
+
+
+@media(max-width: 1199px){
+    .fl-page-bnr-title{
+        font-size: 70px;
+    }
+    li.product-list{
+        width: 33.3333%;
+    }
+    li.product-list:nth-child(4n+1) {
+        clear: initial;
+    }
+    li.product-list:nth-child(3n+1) {
+        clear: left;
+    }
+}
+
+@media(max-width: 991px){
+    .fl-page-bnr-title{
+        font-size: 60px;
+    }
+    .filter-rgt{
+        width: 100%;
+    }
+    .fl-filter-cntlr{
+        margin: 0 -10px;
+    }
+    .drop-filter.filter-4,
+    .drop-filter{
+        width: 50%;
+        float: left;
+        padding: 0 10px 20px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .fl-filter-cntlr .drop-filter form{
+        width: 100%;
+    }
+    .fl-filter-cntlr .drop-filter select{
+        width: 100%;
+        min-width: initial;
+    }
+    ul.product-lists{
+        margin: 0 -10px;
+    }
+    li.product-list{
+        padding: 0 10px 40px;
+    }
+}
+
+@media(max-width: 767px){
+    .fl-page-bnr-title{
+        font-size: 50px;
+    }
+    .drop-filter{
+        width: 50%;
+    }
+    li.product-list{
+        width: 50%;
+    }
+    li.product-list:nth-child(3n+1) {
+        clear: initial;
+    }
+    li.product-list:nth-child(2n+1) {
+        clear: left;
+    }
+    .fl-load-more-btn{
+        padding-bottom: 0;
+        padding-top: 50px;
+    }
+}
+@media(max-width: 639px){
+   li.product-list{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    } 
+    .product-grid-inr{
+        max-width: 450px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+@media(max-width: 479px){
+    .drop-filter.filter-4,
+    .drop-filter{
+        width: 100%;
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .fl-filter-cntlr{
+        margin: 0;
+    }
+}
+
+
