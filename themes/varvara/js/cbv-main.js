@@ -26,7 +26,7 @@ if( $('.AboutInterviewSlider').length ){
           }
         },
         {
-          breakpoint: 575,
+          breakpoint: 640,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
