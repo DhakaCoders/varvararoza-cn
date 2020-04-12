@@ -115,21 +115,22 @@ function artTypee(){
   else
     return false;
 }
-
+if($("#productSort").length){
+  var pSORT = $("#productSort").data('psort');
+}
 $("#loadMore").on('click', function(e) {
     e.preventDefault();
     var catID = '';
     var artistID = '';
     var method = '';
     var artType = '';
+    var pSTR = '';
     if(catId() != '') catID = catId();
     if(artistId() != '') artistID = artistId();
     if(methodd() != '') method = methodd();
     if(artTypee() != '') artType = artTypee();
-    console.log(artistID);
-    console.log(method);
-    console.log(artType);
-    //init
+    if(pSORT != '') pSTR = pSORT;
+
     var that = $(this);
     var page = $(this).data('page');
     var newPage = page + 1;
@@ -140,6 +141,8 @@ $("#loadMore").on('click', function(e) {
         type: 'post',
         data: {
             page: page,
+            cat_id: catID,
+            sort: pSTR,
             artist: artistID,
             method: method,
             arttype: artType,
@@ -153,7 +156,7 @@ $("#loadMore").on('click', function(e) {
         
         success: function(response ) {
             //check
-            console.log(response);
+            //console.log(pSORT);
             if (response  == 0) {
                 $('.fl-load-more-btn').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
                 $('.fl-load-more-btn').hide();
@@ -200,7 +203,7 @@ $("#artloadMore").on('click', function(e) {
         
         success: function(response ) {
             //check
-            console.log(response);
+            //console.log(response);
             if (response  == 0) {
                 //$('.art-load-more-btn').prepend('<div class="clearfix"></div><div class="text-center"><p>Geen producten meer om te laden.</p></div>');
                 $('.art-load-more-btn').hide();

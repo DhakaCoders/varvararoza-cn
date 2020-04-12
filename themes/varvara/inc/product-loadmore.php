@@ -41,6 +41,12 @@ function ajax_products_script_load_more($args, $term_id = '', $artist= '', $meth
     $num = 4;
     //page number
     $paged = 1;
+    if(isset($_POST['cat_id']) && !empty($_POST['cat_id'])){
+      $term_id = $_POST['cat_id'];
+    }
+    if(isset($_POST['sort']) && !empty($_POST['sort'])){
+      $sort = $_POST['sort'];
+    }
     if(isset($_POST['artist']) && !empty($_POST['artist'])){
       $artist = $_POST['artist'];
     }
@@ -56,7 +62,62 @@ function ajax_products_script_load_more($args, $term_id = '', $artist= '', $meth
     }
     $termQuery = $metaQuery = '';
 
-    if( !empty($method) && !empty($arttype)){
+    if( !empty($method) && !empty($arttype) && !empty($term_id)){
+      $termQuery = array(
+        'relation' => 'AND',
+        array(
+          'taxonomy' => 'methods',
+          'field' => 'slug',
+          'terms' => $method
+        ),
+        array(
+          'taxonomy' => 'art_type',
+          'field' => 'slug',
+          'terms' => $arttype
+        ),
+        array(
+          'taxonomy' => 'product_cat',
+          'field' => 'term_id',
+          'terms' => $term_id
+        )
+      );
+    } elseif( !empty($method) && empty($arttype) && !empty($term_id)){
+      $termQuery = array(
+        'relation' => 'AND',
+        array(
+          'taxonomy' => 'methods',
+          'field' => 'slug',
+          'terms' => $method
+        ),
+        array(
+          'taxonomy' => 'product_cat',
+          'field' => 'term_id',
+          'terms' => $term_id
+        )
+      );
+    } elseif( empty($method) && !empty($arttype) && !empty($term_id)){
+      $termQuery = array(
+        'relation' => 'AND',
+        array(
+          'taxonomy' => 'art_type',
+          'field' => 'slug',
+          'terms' => $arttype
+        ),
+        array(
+          'taxonomy' => 'product_cat',
+          'field' => 'term_id',
+          'terms' => $term_id
+        )
+      );
+    }elseif( empty($method) && empty($arttype) && !empty($term_id)){
+      $termQuery = array(
+        array(
+          'taxonomy' => 'product_cat',
+          'field' => 'term_id',
+          'terms' => $term_id
+        )
+      );
+    } elseif( !empty($method) && !empty($arttype)){
       $termQuery = array(
         'relation' => 'AND',
         array(

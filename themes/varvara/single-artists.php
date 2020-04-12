@@ -70,7 +70,7 @@ endif;
   if( $query->have_posts() ):
   ?>
 
-<section class="related-products clearfix">
+<div class="related-products clearfix">
   <div class="wide-title"><div class="line"></div>
     <div class="title">Related Products</div>
     <div class="line"></div>
@@ -112,14 +112,9 @@ endif;
      
     </div>
     </li>
-    <?php endwhile; 
-    $shopID = get_option( 'woocommerce_shop_page_id' );
-    ?>
+    <?php endwhile; ?>
   </ul>
-  <div class="allproducts">
-    <a href="<?php echo get_permalink($shopID); ?>">All Products</a>
-  </div>
-</section> 
+</div>  
 <?php endif; wp_reset_postdata(); ?> 
 <?php endwhile; ?>
 <?php get_footer(); ?>

@@ -154,3 +154,79 @@ if (!function_exists('add_custom_box_product_summary')) {
         echo'</div>';
     }
 }
+
+
+
+// Front: Calculate new item price and add it as custom cart item data
+add_filter('woocommerce_add_cart_item_data', 'add_custom_product_data', 10, 3);
+function add_custom_product_data( $cart_item_data, $product_id, $variation_id ) {
+    $status = false;
+    $attributes = get_field('productsec', $product_id);
+    if ( isset($attributes['material']) && !empty($attributes['material'])) {
+        $cart_item_data['material_val'] = $attributes['material'];
+        $cart_item_data['material_label'] = 'Material';
+        $status = true;
+    }
+    if ( isset($attributes['size']) && !empty($attributes['size'])) {
+        $cart_item_data['size_val'] = $attributes['size'];
+        $cart_item_data['size_label'] = 'Size';
+        $status = true;
+    }
+    if ( isset($attributes['size']) && !empty($attributes['size'])) {
+        $cart_item_data['size_val'] = $attributes['size'];
+        $cart_item_data['size_label'] = 'Size';
+        $status = true;
+    }
+    if($status){
+       $cart_item_data['unique_key'] = md5(microtime().rand()); 
+    }
+    
+    return $cart_item_data;
+}
+
+// Front: Display option in cart item
+add_filter('woocommerce_get_item_data', 'display_custom_item_data', 10, 2);
+
+function display_custom_item_data($cart_item_data, $cart_item) {
+    if ( isset($cart_item['color_val']) && isset($cart_item['color_label']) ) {
+        $cart_item_data[] = array(
+            'name' => __($cart_item['color_label'], "woocommerce"),
+            'value' => strip_tags($cart_item['color_val'])
+        );
+
+        
+    }
+
+    if( isset($cart_item['variabe_val']) && isset($cart_item['variabe_label']) ) {
+        $cart_item_data[] = array(
+            'name' => __($cart_item['variabe_label'], "woocommerce"),
+            'value' => strip_tags($cart_item['variabe_val'])
+        );
+    }
+    if( isset($cart_item['size_val']) && isset($cart_item['size_label']) ) {
+        $cart_item_data[] = array(
+            'name' => __($cart_item['size_label'], "woocommerce"),
+            'value' => strip_tags($cart_item['size_val'])
+        );
+    }
+
+    return $cart_item_data;
+}
+
+
+// Save and display custom fields in order item meta
+add_action( 'woocommerce_add_order_item_meta', 'add_custom_fields_order_item_meta', 20, 3 );
+function add_custom_fields_order_item_meta( $item_id, $cart_item, $cart_item_key ) {
+
+    if ( isset($cart_item['color_val']) && isset($cart_item['color_label']) ) {
+        wc_add_order_item_meta($item_id, $cart_item['color_label'], $cart_item['color_val']);
+        
+    }
+    if( isset($cart_item['variabe_val']) && isset($cart_item['variabe_label']) ) {
+        wc_add_order_item_meta($item_id, $cart_item['variabe_label'], $cart_item['variabe_val']);
+    }
+    if( isset($cart_item['size_val']) && isset($cart_item['size_label']) ) {
+        wc_add_order_item_meta($item_id, $cart_item['size_label'], $cart_item['size_val']);
+    }
+
+}

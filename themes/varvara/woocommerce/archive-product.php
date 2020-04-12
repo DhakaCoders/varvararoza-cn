@@ -18,6 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
+$ccat = get_queried_object();
 $shopID = get_option( 'woocommerce_shop_page_id' );
 $sorting = '';
 if(isset($_COOKIE['sorting']) && !empty($_COOKIE['sorting'])) {
@@ -29,6 +30,8 @@ if(isset($_COOKIE['sorting']) && !empty($_COOKIE['sorting'])) {
     'post_per_page' => -1
   ));
 
+$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$shopurl = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 
 if( !empty($shopID) ): 
@@ -60,9 +63,14 @@ if( isset($_GET['arttype']) && !empty($_GET['arttype'])):
 	$arttype = $_GET['arttype'];
 endif;
 ?>
-<span id="shopUrl" data-url="<?php echo get_permalink($shopID); ?>" style="display: none;"></span>
+<span id="shopUrl" data-url="<?php echo $shopurl; ?>" style="display: none;"></span>
 
 <span id="filtertype" data-id="<?php echo $artistid ?>" data-method="<?php echo $methodd ?>" data-arttype="<?php echo $arttype ?>" style="display: none;"></span>
+<?php if( $ccat ): ?>
+<span style="display: none;" id="catID" data-termid="<?php echo @$ccat->term_id; ?>"></span>
+<?php endif; ?>
+
+<span id="productSort" data-psort="<?php echo $sorting; ?>" style="display: none;"></span>
 <section class="product-archive">
 	<div class="content-wrap">
 		<div class="container-fluid">
