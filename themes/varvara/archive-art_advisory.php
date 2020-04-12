@@ -3,13 +3,18 @@
 Template Name:Art Advisory
 */
 get_header();
-$thisID = 341;
+$thisID = 376;
+$artsort = 'desc';
+if(isset($_COOKIE['artsort']) && !empty($_COOKIE['artsort'])) {
+	$artsort = $_COOKIE['artsort'];
+}
+
 if( !empty($thisID) ): 
 $page = get_post( $thisID ); 
 ?>
 <section class="page-banner">
   <div class="page-banner-controller" style="overflow: hidden;">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/img/page-bnr.jpg);">
+    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/img/fl-page-banner.jpg);">
     </div>
     <div class="page-banner-des">
         <div>
@@ -20,6 +25,7 @@ $page = get_post( $thisID );
   </div>
 </section><!-- end of page-banner -->
 <?php endif; ?>
+<span id="artSortString" data-string="<?php echo $artsort; ?>" style="display: none;"></span>
 <section class="art-post-grid-sec-wrp">
 	<div class="container-fluid">
 	  <div class="row">
@@ -27,13 +33,11 @@ $page = get_post( $thisID );
 	  	  <div class="art-post-grid-block clearfix">
 	  	  	<div class="filter-rgt fl-filter-cntlr clearfix">
 			   <div class="drop-filter filter-4">
-			   <form>
-			   		<select class="selectpicker">
-	                  <option selected="selected">SORT BY</option>
-	                   <option>DESC</option>
-	                   <option>ASC</option>
+			   		<select class="selectpicker" id="artSort" data-url="<?php echo get_permalink($thisID); ?>">
+	                    <option selected="selected" value="">SORT BY</option>
+		                <option value="desc" <?php echo ($artsort == 'desc')? 'selected="selected"': '';?>>DESC</option>
+		                <option value="asc" <?php echo ($artsort == 'asc')? 'selected="selected"': '';?>>ASC</option>
 	                </select> 
-			   </form>
 			   </div>
 			</div>
 		  	  <div class="art-post-grid-wrp clearfix">

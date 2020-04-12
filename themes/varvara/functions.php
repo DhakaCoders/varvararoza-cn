@@ -22,6 +22,7 @@ if( !function_exists('cbv_theme_setup') ){
 		add_theme_support( 'woocommerce' );
 		add_image_size( 'artistgrid', 250, 255, true );
 		add_image_size( 'exhgrid', 536, 370, true );
+		add_image_size( 'artgrid', 388, 274, true );
 	}
 
 }
@@ -32,7 +33,7 @@ Enqueue Scripts->>
 */
 function cbv_theme_scripts(){
     //include_once( DIR . '/enq-scripts/popper.php' );
-    include_once( DIR . '/enq-scripts/bootstrap.php' );
+    //include_once( DIR . '/enq-scripts/selectric.php' );
 }
 
 add_action( 'wp_enqueue_scripts', 'cbv_theme_scripts');

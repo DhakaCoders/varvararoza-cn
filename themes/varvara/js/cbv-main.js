@@ -170,9 +170,15 @@ $("#loadMore").on('click', function(e) {
     });
 });
 
+if($("#artSortString").length){
+  var aStr = $("#artSortString").data('string');
+}
 $("#artloadMore").on('click', function(e) {
     e.preventDefault();
+    var artSTR = '';
     //init
+    if(aStr != '') artSTR = aStr;
+
     var that = $(this);
     var page = $(this).data('page');
     var newPage = page + 1;
@@ -183,6 +189,7 @@ $("#artloadMore").on('click', function(e) {
         type: 'post',
         data: {
             page: page,
+            sort: artSTR,
             el_li: 'not',
             action: 'ajax_art_script_load_more'
         },
@@ -213,10 +220,18 @@ $("#artloadMore").on('click', function(e) {
 if( $("#shopUrl").length ){
   var SURL = $("#shopUrl").data('url');
 }
+
 $('#sortproduct').on('change', function(){               
   var campSort = $(this).val();
   setCookie('sorting', campSort, 1);
   window.location.href = SURL;
+});
+
+$('#artSort').on('change', function(){               
+  var aSort = $(this).val();
+  var AURL = $(this).data('url');
+  setCookie('artsort', aSort, 1);
+  window.location.href = AURL;
 });
 
 })(jQuery);

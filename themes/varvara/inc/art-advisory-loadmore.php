@@ -6,7 +6,7 @@
 function art_script_load_more($args = array()) {
   $sorting ='';
 
-  if( isset($_COOKIE['sorting']) && !empty($_COOKIE['sorting'])) $sorting = $_COOKIE['sorting'];
+  if( isset($_COOKIE['artsort']) && !empty($_COOKIE['artsort'])) $sorting = $_COOKIE['artsort'];
 
   echo '<ul class="clearfix" id="art-content">';
       ajax_art_script_load_more($args, $sorting);
@@ -38,6 +38,9 @@ function ajax_art_script_load_more($args, $sort = 'DESC') {
     $num = 4;
     //page number
     $paged = 1;
+    if(isset($_POST['sort']) && !empty($_POST['sort'])){
+        $sort = $_POST['sort'];
+    }
     if(isset($_POST['page']) && !empty($_POST['page'])){
         $paged = $_POST['page'] + $paged;
     }
@@ -56,8 +59,9 @@ function ajax_art_script_load_more($args, $sort = 'DESC') {
     while($query->have_posts()): $query->the_post();
       $thumb_id = get_post_thumbnail_id(get_the_ID());
       if(!empty($thumb_id)){
-        $art_thumb = cbv_get_image_src($thumb_id, 'prodgrid');
+        $art_thumb = cbv_get_image_src($thumb_id, 'artgrid');
       }
+      $excerpt = get_field('overview', get_the_ID());
     ?>
     <li>
       <div class="art-post-grid-inr">
@@ -69,7 +73,7 @@ function ajax_art_script_load_more($args, $sort = 'DESC') {
           <h5 class="art-post-grid-tilte">
             <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
           </h5>
-          <?php the_excerpt(); ?>
+          <?php if( !empty($excerpt['excerpt']) ) echo wpautop( $excerpt['excerpt'] ); ?>
         </div>
       </div>
     </li>

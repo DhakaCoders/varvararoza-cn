@@ -17,15 +17,24 @@ a, a:hover, a:focus, button:hover, button:focus{
 body {
 
 }
+a,input,img,textarea,button,svg{
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.scale,.fl-product-grd-img:hover img{
+	transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
 
 
-/**
-Containers
-*/
 .container-xlg,
 .container-lg,
 .container-md,
-.container-sm{
+.container-sm,
+.container-xs{
 	width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -38,22 +47,31 @@ Containers
 .container-lg:after,
 .container-md:before,
 .container-md:after,
-.container-sm:beofre,
+.container-sm:before,
 .container-sm:after,
-.container-xs:beofre,
+.container-xs:before,
 .container-xs:after{
 	content: "";
 	display: table;
 	clear: both;
 }
-.container-xlg{}
-.container-lg{}
-.container{
+.container-xlg{
 	
 }
-.container-md{}
+.container-lg{
 
-.container-sm{}
+}
+.container{
+	max-width: 1200px;
+	width: 100%;
+}
+.container-md{
+
+}
+
+.container-sm{
+
+}
 
 
 .ulc{
@@ -75,6 +93,12 @@ img{
 	height: auto;
 }
 
+.hide-lg{
+	display: block!important;
+}
+.show-lg{
+	display: none!important;
+}
 .hide-md{
 	display: block!important;
 }
@@ -106,7 +130,6 @@ img{
 	bottom: 0;
 	z-index: 10;
 }
-
 
 .masthead{
 	border-bottom: 1px solid #f3f3f3;

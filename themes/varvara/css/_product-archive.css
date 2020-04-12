@@ -2,6 +2,7 @@
     background-size: cover!important;
     background-repeat: no-repeat!important;
     background-position: center center!important;
+    margin-top: 107px!important;
 }
 .fl-page-bnr-des{
     padding: 120px 0 130px;
@@ -69,6 +70,14 @@ section.product-archive {
     margin-right: 30px;
 }
 
+
+.fl-filter-cntlr .drop-filter select{
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+    padding: 10px 25px 10px 10px;
+    min-width: 170px;
+}
+
 ul.product-lists {
     margin: 0;
     padding: 0;
@@ -102,6 +111,7 @@ li.product-list:nth-child(4n+1){
 
 .fl-product-grd-img{
     position: relative;
+    overflow: hidden;
 }
 
 .fl-product-grd-des{

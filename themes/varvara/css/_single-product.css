@@ -137,6 +137,9 @@ body .woocommerce-product-gallery {
 .fl-social-icons ul li:last-child{
 	margin-right: 0;
 }
+.fl-social-icons ul li a:hover{
+	opacity: .9;
+}
 .pricehtml{
 	margin-bottom: 25px;
 }
@@ -161,7 +164,21 @@ body .woocommerce-product-gallery {
 .backbtn{
 	padding-left: 140px;
 }
-
+.backbtn a{
+	padding-left: 30px;
+	position: relative;
+}
 .backbtn a span{
 	padding-left: 5px;
+}
+.backbtn a img{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	left: 0;
+}
+.backbtn a:hover img{
+	left: -3px;
 }
