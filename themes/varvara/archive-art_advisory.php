@@ -3,13 +3,13 @@
 Template Name:Art Advisory
 */
 get_header();
-$thisID = 341;
+$thisID = 376;
 if( !empty($thisID) ): 
 $page = get_post( $thisID ); 
 ?>
 <section class="page-banner">
   <div class="page-banner-controller" style="overflow: hidden;">
-    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/img/page-bnr.jpg);">
+    <div class="page-banner-bg" style="background-image:url(<?php echo THEME_URI; ?>/img/fl-page-banner.jpg);">
     </div>
     <div class="page-banner-des">
         <div>
