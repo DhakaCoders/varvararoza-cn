@@ -82,11 +82,10 @@
 		        <div class="modal-body">
 		          <div class="fl-enquire-modal-content">
 		          	<h3 class="fl-modal-title">Enquire</h3>
-			          <form>
-			            <input type="text"  placeholder="Your Name">
-			            <input type="email"  placeholder="E-mail">
-			            <input type="submit" value="SEND">
-			          </form>
+		          	<?php 
+		          	$fcshortcode = get_field('fcshortcode', 'option');
+		          	if( !empty($fcshortcode) ) echo do_shortcode( $fcshortcode );
+		          	?>
 		          </div>
 		        </div>
 		      </div>
