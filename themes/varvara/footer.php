@@ -8,7 +8,7 @@
 
 			<div class="footer-left footer-list">
 
-				<span><?php echo get_field('copyright_text', 'option'); ?></span> <span class="sep">|</span> 
+				<span class="copyright"><?php echo get_field('copyright_text', 'option'); ?></span> <span class="sep">|</span> 
 				<?php 
 				$link = get_field('privacy_link', 'option');
 				if( $link ): 

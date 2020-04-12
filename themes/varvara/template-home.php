@@ -122,7 +122,7 @@ get_header(); ?>
 							    ?>
 							    <span><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></span> <span class="sep">|</span> 
 							<?php endif; ?>
-							<span><?php echo get_field('copyright_text', 'option'); ?></span>
+							<span class="copyright"><?php echo get_field('copyright_text', 'option'); ?></span>
 
 
 						</div>

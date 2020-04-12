@@ -617,7 +617,10 @@ footer.regular-footer .footer-list svg {
 }
 
 
-
+footer.regular-footer .footer-list span a,
+.copyright {
+    text-transform: uppercase;
+}
 
 
 /*
