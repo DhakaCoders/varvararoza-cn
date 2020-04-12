@@ -287,6 +287,20 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 .woocommerce div.product form.cart .reset_variations{
     display: none!important;
 }
+.woo-page-cntlr{
+	padding: 50px 0 70px;
+}
+.woo-page-cntlr > h1{
+	font-size: 45px;
+}
+.woocommerce-button.button.woocommerce-form-login__submit{
+	min-width: 170px;
+}
+.woocommerce-form-login__rememberme{
+	margin-bottom: 0;
+	margin-top: 9px;
+}
+
 @media(max-width: 1199px){
 	body.woocommerce-order-received .woocommerce ul.order_details{
 		padding-left: 15px;
@@ -301,6 +315,9 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 	}
 	body.woocommerce-order-received .woocommerce ul.order_details li:nth-child(3n+1){
 		clear: left;
+	}
+	.backbtn{
+		padding-left: 100px;
 	}
 } 
 
@@ -317,6 +334,22 @@ body.woocommerce-order-received h2.woocommerce-column__title {
         float: left;
         width: 100%;
     }
+    body .woocommerce-product-gallery{
+    	width: 57%;
+    }
+    .summary.entry-summary{
+    	width: 43%;
+    }
+    .thumbnail-items{
+    	width: 20%;
+    }
+    .product-gallery-img{
+    	padding-right: 20px;
+    	width: 80%;
+    }
+    .fl-social-icons ul {
+	    padding-left: 25px;
+	}
 
 }
 @media(max-width: 768px){
@@ -325,6 +358,18 @@ body.woocommerce-order-received h2.woocommerce-column__title {
     }
     .woocommerce-MyAccount-navigation ul{
         padding-left: 0;
+    }
+    body .woocommerce-product-gallery{
+    	width: 100%!important;
+    }
+    .product-gallery-img{
+    	padding-right: 0;
+    }
+    .summary.entry-summary{
+    	width: 100%!important;
+    }
+    .backbtn{
+    	padding-left: 0;
     }
 }
 
@@ -379,6 +424,10 @@ body.woocommerce-order-received h2.woocommerce-column__title {
         width: 100%;
         overflow: visible;
     }
+    body.single-product .content-area .product .backbtn {
+	    padding-top: 35px;
+	    padding-bottom: 30px;
+	}
 }
 
 
@@ -400,6 +449,13 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 		max-width: 112px;
 		margin: 0 auto;
 	}
+	.fl-social-icons ul {
+	    padding-left: 20px;
+	}
+	.fl-social-icons ul li{
+		margin-right: 13px;
+	}
+
 }
 
 
