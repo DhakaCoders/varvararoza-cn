@@ -2,6 +2,9 @@
 get_header();
 while( have_posts() ): the_post();
 	$thisID = get_the_ID();
+
+	$page_url = get_permalink($thisID);
+
 ?>
 
 
@@ -56,10 +59,10 @@ while( have_posts() ): the_post();
 	  	  	?>
 	  	  	  <div class="art-article-share">
 	  	  	  	<strong>Share this Article</strong>
-	  	  	  	<a href="https://www.facebook.com/sharer/sharer.php?u="<?php echo get_permalink($thisID); ?>><img src="<?php echo THEME_URI;?>/img/facebook.png"></a>
+	  	  	  	<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $page_url; ?>"><img src="<?php echo THEME_URI;?>/img/facebook.png"></a>
 	  	  	  	<a href="#"><img src="<?php echo THEME_URI;?>/img/instagram.png"></a>
-	  	  	  	<a href="https://twitter.com/home?status="<?php echo get_permalink($thisID); ?>><img src="<?php echo THEME_URI;?>/img/twiter.png"></a>
-	  	  	  	<a href="mailto:info@example.com?&subject=&body="<?php echo get_permalink($thisID); ?>><img src="<?php echo THEME_URI;?>/img/email.png"></a>
+	  	  	  	<a href="https://twitter.com/home?status=<?php echo $page_url; ?>"><img src="<?php echo THEME_URI;?>/img/twiter.png"></a>
+	  	  	  	<a href="mailto:info@example.com?&subject=&body=<?php echo $page_url; ?>"><img src="<?php echo THEME_URI;?>/img/email.png"></a>
 	  	  	  </div>
 	  	  	</div>
 	  	  </div>
