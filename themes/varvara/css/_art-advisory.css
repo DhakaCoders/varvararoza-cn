@@ -173,6 +173,7 @@ art-article-content-sec-wrp
 	background-position: center center !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
+	position: relative;
 }
 .art-article-share{
 	padding-left: 40px;

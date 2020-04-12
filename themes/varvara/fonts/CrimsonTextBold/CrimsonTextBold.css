@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'CrimsonTextBold';
-    src: url('fonts/CrimsonTextBold.eot');
-    src: url('fonts/CrimsonTextBold.eot') format('embedded-opentype'),
-         url('fonts/CrimsonTextBold.woff2') format('woff2'),
-         url('fonts/CrimsonTextBold.woff') format('woff'),
-         url('fonts/CrimsonTextBold.ttf') format('truetype'),
-         url('fonts/CrimsonTextBold.svg#CrimsonTextBold') format('svg');
-}
