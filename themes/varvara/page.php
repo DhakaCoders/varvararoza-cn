@@ -15,11 +15,12 @@ get_header(); ?>
 			<div class="content-wrap">
 
 			<div class="container-fluid">
+			<?php if( is_cart() OR is_checkout() OR is_account_page() OR is_wc_endpoint_url() ) echo '<div class="woo-page-cntlr">'; ?>
 
 			<h1><?php the_title(); ?></h1>
 
 			<?php the_content(); ?>
-
+			<?php if( is_cart() OR is_checkout() OR is_account_page() OR is_wc_endpoint_url() ) echo '</div>'; ?>
 			</div>
 
 			</div>

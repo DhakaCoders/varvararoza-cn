@@ -1,6 +1,7 @@
 <?php 
 get_header();
 while( have_posts() ): the_post();
+	$thisID = get_the_ID();
 ?>
 
 
@@ -42,7 +43,7 @@ while( have_posts() ): the_post();
 	              echo '<div class="art-article-gallery-wrp clearfix">';
 	              	$imgsrc = '';
 	                foreach( $gallery_cn as $image ):
-	                $imgsrc = cbv_get_image_src($image, 'gallerygrid');  
+	                $imgsrc = cbv_get_image_src($image, 'artgallery');  
 	                echo '<div class="art-article-gallery-grid">';
 	                echo '<div class="art-article-gallery-img" style="background:url('.$imgsrc.');"></div>';
 	                echo "</div>";
@@ -55,10 +56,10 @@ while( have_posts() ): the_post();
 	  	  	?>
 	  	  	  <div class="art-article-share">
 	  	  	  	<strong>Share this Article</strong>
-	  	  	  	<a href="#"><img src="<?php echo THEME_URI;?>/img/facebook.png"></a>
+	  	  	  	<a href="https://www.facebook.com/sharer/sharer.php?u="<?php echo get_permalink($thisID); ?>><img src="<?php echo THEME_URI;?>/img/facebook.png"></a>
 	  	  	  	<a href="#"><img src="<?php echo THEME_URI;?>/img/instagram.png"></a>
-	  	  	  	<a href="#"><img src="<?php echo THEME_URI;?>/img/twiter.png"></a>
-	  	  	  	<a href="#"><img src="<?php echo THEME_URI;?>/img/email.png"></a>
+	  	  	  	<a href="https://twitter.com/home?status="<?php echo get_permalink($thisID); ?>><img src="<?php echo THEME_URI;?>/img/twiter.png"></a>
+	  	  	  	<a href="mailto:info@example.com?&subject=&body="<?php echo get_permalink($thisID); ?>><img src="<?php echo THEME_URI;?>/img/email.png"></a>
 	  	  	  </div>
 	  	  	</div>
 	  	  </div>
