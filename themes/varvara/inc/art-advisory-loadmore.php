@@ -58,6 +58,7 @@ function ajax_art_script_load_more($args, $sort = 'DESC') {
       if(!empty($thumb_id)){
         $art_thumb = cbv_get_image_src($thumb_id, 'prodgrid');
       }
+      $excerpt = get_field('overview', get_the_ID());
     ?>
     <li>
       <div class="art-post-grid-inr">
@@ -69,7 +70,7 @@ function ajax_art_script_load_more($args, $sort = 'DESC') {
           <h5 class="art-post-grid-tilte">
             <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
           </h5>
-          <?php the_excerpt(); ?>
+          <?php if( !empty($excerpt['excerpt']) ) echo wpautop( $excerpt['excerpt'] ); ?>
         </div>
       </div>
     </li>
