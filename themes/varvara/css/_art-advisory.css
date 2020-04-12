@@ -50,7 +50,8 @@
 	top: -38px;
 	bottom: 0;
 	width: 1px;
-	background: #000;
+	background: #000000;
+	opacity: 0.5;
 }
 .art-post-grid-dsc span{
 	display: inline-block;
@@ -64,8 +65,9 @@
 .art-post-grid-tilte{
 	font-size: 18px;
 	line-height: 22px;
-	font-family: 'CrimsonText-Bold';
 	margin-bottom: 15px;
+	font-weight: 700;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .art-post-grid-tilte a{
 	color: inherit;
