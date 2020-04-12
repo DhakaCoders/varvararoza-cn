@@ -29,7 +29,7 @@
 					if( $fblink && !empty($fblink) ): 
 					    ?>
 			       <span class="instagram-link">
-			    	<a href="<?php echo esc_url( $fblink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/instagramicon.svg" alt="instagram icon"></a></span> 
+			    	<a href="<?php echo esc_url( $fblink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/facebook.png" alt="instagram icon"></a></span> 
 					<?php endif; ?>
 					<?php 
 					$inslink = get_field('instagram_url', 'option');

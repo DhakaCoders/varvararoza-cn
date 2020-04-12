@@ -596,6 +596,10 @@ al-post-grid-sec-wrp
 	.page-banner-title br{
 		display: none;
 	}
+	.ex-upcoming-slide-two-rgt {
+	    padding: 55px 45px 45px;
+	}
+
 	
 	
 
@@ -797,6 +801,7 @@ al-post-grid-sec-wrp
 	.ex-upcoming-slide-two-lft {
 	    width: 100%;
 	    float: right;
+	    position: static;
 	}	
 	.ex-upcoming-slide-two-img{
 		position: static;
