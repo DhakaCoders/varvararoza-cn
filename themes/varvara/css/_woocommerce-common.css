@@ -321,6 +321,10 @@ td.product-thumbnail a img{
 .product-name a{
 	font-size: 20px;
 }
+span.wpcf7-not-valid-tip{
+	font-size: 14px;
+	line-height: 1;
+}
 @media(max-width: 1199px){
 	body.woocommerce-order-received .woocommerce ul.order_details{
 		padding-left: 15px;
