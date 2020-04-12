@@ -17,6 +17,17 @@ a, a:hover, a:focus, button:hover, button:focus{
 body {
 
 }
+a,input,img,textarea,button,svg{
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.scale,.fl-product-grd-img:hover img{
+	transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
 
 
 .container-xlg,
