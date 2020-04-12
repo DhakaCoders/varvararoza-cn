@@ -99,6 +99,7 @@ body .woocommerce-product-gallery {
 	font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     margin-bottom: 35px;
+    box-shadow: none!important;
 }
 .price-purchase > a:hover{
 	background: transparent;
