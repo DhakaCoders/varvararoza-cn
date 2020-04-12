@@ -20,7 +20,7 @@ about-interview-sec-wrp
 	bottom: 0;
 	right: 0;
 	background:#000;
-	opacity: 0.5;
+	opacity: 0.75;
 }
 .ex-upcoming-slider .ex-upcoming-slide-item,
 .AboutInterviewSlider .about-interview-slide-item{
@@ -127,13 +127,16 @@ ex-upcoming-slider-sec-wrp
 	margin: 0 auto;
 }
 .ex-upcoming-slide-two-part{
-	height: 370px;
+	min-height: 370px;
 	position: relative;
 }
-.ex-upcoming-slide-two-lft{
-	width: 50%;
-	float: right;
-	position: relative;
+.ex-upcoming-slide-two-lft {
+    width: 50%;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 .ex-upcoming-slide-two-img{
 	background-size: cover !important;
@@ -144,17 +147,12 @@ ex-upcoming-slider-sec-wrp
 	right: 0;
 	top: 0;
 	bottom: 0;
-	height: 370px;
 }
 .ex-upcoming-slide-two-rgt{
 	width: 50%;
 	float: left;
 	background:#000;
 	padding: 55px 70px 45px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
 }
 .ex-upcoming-slide-two-dsc span{
 	display: block;
@@ -339,6 +337,7 @@ pagination css
 	color: #000;
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	text-align: center;
+	margin-bottom: 15px;
 }
 .art-page-banner .page-banner-title{
 	font-size: 34px !important;
@@ -575,6 +574,8 @@ al-post-grid-sec-wrp
 
 
 
+
+
 /*
 ----------------
  Responsive Css
@@ -595,6 +596,7 @@ al-post-grid-sec-wrp
 	.page-banner-title br{
 		display: none;
 	}
+	
 	
 
 }
@@ -670,8 +672,14 @@ al-post-grid-sec-wrp
 }
 
 @media(max-width: 767px){
+	.about-interview-sec-wrp {
+	    height: 360px;
+	}
+	.AboutInterviewSlider .slick-dots {
+	    bottom: -75px;
+	}
 	.about-interview-slide-dsc {
-	    padding: 15px 15px 18px;
+	    padding: 10px 15px 12px;
 	}
 	.about-interview-sec-wrp .wide-title .line {
 	    -ms-flex: 0 0 28%;
@@ -680,7 +688,7 @@ al-post-grid-sec-wrp
 	}
 	.ex-upcoming-slider-sec-wrp .wide-title .title,
 	.about-interview-sec-wrp .wide-title .title {
-	    padding: 40px 25px;
+	    padding: 35px 25px;
 	    font-size: 23px;
 	}
 	.ex-upcoming-slide-two-title {
@@ -746,14 +754,34 @@ al-post-grid-sec-wrp
 	    line-height: 36px !important;
 	    margin-bottom: 25px;
 	}
+	.about-interview-slide-dsc span{
+		padding-bottom: 10px;
+	}
+	.about-interview-slide-dsc h3{
+		font-size: 24px;
+		line-height: 26px;
+	}
+	.page-banner {
+	    padding-top: 70px;
+	}
 
 	
 
 }
-
+@media(max-width: 639px){
+	.about-interview-slide-dsc {
+	    max-width: 380px;
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	.about-interview-slide-dsc h3{
+		font-size: 23px;
+		line-height: 25px;
+	}
+}
 @media(max-width: 575px){
 	.about-interview-sec-wrp {
-	    height: 360px;
+	    height: 340px;
 	}
 	.AboutInterviewSlider .slick-dots {
 	    bottom: -60px;
@@ -839,6 +867,13 @@ al-post-grid-sec-wrp
 	}
 	.artist-single-img {
 	    height: 350px !important;
+	}
+	.about-interview-slide-dsc h3{
+		font-size: 22px;
+		line-height: 24px;
+	}
+	.AboutInterviewSlider .slick-dots {
+	    bottom: -70px;
 	}
 	
 }
