@@ -26,7 +26,7 @@
 }
 .exhibitions-archive-page section.next-exhibition .row .text-col .titles,
 .exhibitions-archive-page section.upcoming-exhibitions .row .text-col .titles {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 @media(max-width: 1399px){
 	.exhibitions-archive-page section.upcoming-exhibitions .row .text-col,

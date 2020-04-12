@@ -79,7 +79,7 @@
 	-webkit-transition: all 0.5s;
 }
 .art-post-grid-tilte a:hover{
-	color: #c6c6c6;
+	opacity: .8;
 }
 .art-post-grid-dsc p{
 	font-size: 12px;
