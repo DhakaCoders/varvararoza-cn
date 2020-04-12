@@ -202,7 +202,7 @@ function ajax_products_script_load_more($args, $term_id = '', $artist= '', $meth
               <?php
            if ($product->get_price() <= 0){
               ?>
-          <a href="#">Enquire</a>
+          <a href="#" data-toggle="modal" data-target="#enquire_modal">Enquire</a>
           <?php }else{ ?>
             <div class="loop-price">
                   <strong class="price-label">Price:</strong><?php echo $product->get_price_html(); ?>
