@@ -324,6 +324,7 @@ li.product-list:nth-child(4n+1){
     line-height: 1;
     height: 50px;
     border-radius: 4px;
+    border: 2px solid #000;
 }
 
 

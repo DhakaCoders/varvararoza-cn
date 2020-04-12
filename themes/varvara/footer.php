@@ -25,13 +25,18 @@
 
 
 				<?php 
-				$link = get_field('instagram_url', 'option');
-				if( $link ): 
-				    $link_url = $link['url'];
-				    $link_title = $link['title'];
-				    $link_target = $link['target'] ? $link['target'] : '_self';
-				    ?>
-				    <span class="instagram-link"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/instagramicon.svg" alt="instagram icon"><?php echo esc_html( $link_title ); ?></a></span> <span class="sep">|</span> 
+					$fblink = get_field('facebook_url', 'option');
+					if( $fblink && !empty($fblink) ): 
+					    ?>
+			       <span class="instagram-link">
+			    	<a href="<?php echo esc_url( $fblink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/instagramicon.svg" alt="instagram icon"></a></span> 
+					<?php endif; ?>
+					<?php 
+					$inslink = get_field('instagram_url', 'option');
+					if( $inslink && !empty($inslink) ): 
+					    ?>
+			       <span class="instagram-link">
+			    	<a href="<?php echo esc_url( $inslink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/instagramicon.svg" alt="instagram icon"></a></span> 
 				<?php endif; ?>
 
 
@@ -82,11 +87,10 @@
 		        <div class="modal-body">
 		          <div class="fl-enquire-modal-content">
 		          	<h3 class="fl-modal-title">Enquire</h3>
-			          <form>
-			            <input type="text"  placeholder="Your Name">
-			            <input type="email"  placeholder="E-mail">
-			            <input type="submit" value="SEND">
-			          </form>
+		          	<?php 
+		          	$fcshortcode = get_field('fcshortcode', 'option');
+		          	if( !empty($fcshortcode) ) echo do_shortcode( $fcshortcode );
+		          	?>
 		          </div>
 		        </div>
 		      </div>

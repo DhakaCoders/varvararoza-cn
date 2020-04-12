@@ -81,15 +81,19 @@ get_header(); ?>
 					<div class="container-fluid">
 
 						<div class="footer-right footer-list footer-list-1">
-
 							<?php 
-							$link = get_field('instagram_url', 'option');
-							if( $link ): 
-							    $link_url = $link['url'];
-							    $link_title = $link['title'];
-							    $link_target = $link['target'] ? $link['target'] : '_self';
+							$fblink = get_field('facebook_url', 'option');
+							if( $fblink && !empty($fblink) ): 
 							    ?>
-					    <span class="instagram-link"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/instagramicon.svg" alt="instagram icon"><?php echo esc_html( $link_title ); ?></a></span><span class="sep">|</span> 
+					       <span class="instagram-link">
+					    	<a href="<?php echo esc_url( $fblink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/instagramicon.svg" alt="instagram icon"></a></span> 
+							<?php endif; ?>
+							<?php 
+							$inslink = get_field('instagram_url', 'option');
+							if( $inslink && !empty($inslink) ): 
+							?>
+					       <span class="instagram-link">
+					    	<a href="<?php echo esc_url( $inslink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/instagramicon.svg" alt="instagram icon"></a></span> 
 							<?php endif; ?>
 
 

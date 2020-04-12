@@ -36,7 +36,7 @@ gtag('config', 'UA-148365752-1');
             
                 <div class="container-fluid clearfix">
 
-                <a href="/" class="masthead__logo" data-aos="fade-down">
+                <a href="<?php echo esc_url( home_url('/') );?>" class="masthead__logo" data-aos="fade-down">
 
                     <?php if (!is_front_page()) { ?>
 

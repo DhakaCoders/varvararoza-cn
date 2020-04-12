@@ -306,6 +306,21 @@ body.woocommerce-order-received h2.woocommerce-column__title {
 	line-height: 1;
 	margin-bottom: 15px;
 }
+dt.variation-Material,
+dt.variation-Size,
+dt.variation-Created{
+	margin-top: 4px;
+}
+td.product-thumbnail a{
+	display: block;
+}
+td.product-thumbnail a img{
+	max-width: 100px!important;
+	width: 100%!important;
+}
+.product-name a{
+	font-size: 20px;
+}
 @media(max-width: 1199px){
 	body.woocommerce-order-received .woocommerce ul.order_details{
 		padding-left: 15px;
@@ -652,6 +667,13 @@ body.woocommerce-account #customer_login .u-column2.col-2 > h2{
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	border-radius: 0;
+}
+.woocommerce input[type="text"]:focus,
+.woocommerce input[type="email"]:focus,
+.woocommerce input[type="tel"]:focus,
+.woocommerce input[type="password"]:focus,
+.woocommerce textarea:focus{
+		border-color: #d2d0d0;
 }
 .woocommerce textarea{
 	min-height: 200px;
