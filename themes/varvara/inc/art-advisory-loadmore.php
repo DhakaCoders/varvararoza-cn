@@ -65,8 +65,10 @@ function ajax_art_script_load_more($args, $sort = 'DESC') {
     ?>
     <li>
       <div class="art-post-grid-inr">
-        <div class="art-post-grid-img" style="background:url(<?php echo $art_thumb;?>);">
-          <a href="<?php echo get_permalink(); ?>" class="overlay-link"></a>
+        <div class="art-post-grid-img-cntlr ">
+          <div class="art-post-grid-img" style="background:url(<?php echo $art_thumb;?>);">
+            <a href="<?php echo get_permalink(); ?>" class="overlay-link"></a>
+          </div>
         </div>
         <div class="art-post-grid-dsc">
           <span><?php echo get_the_date('d M Y');?></span>
