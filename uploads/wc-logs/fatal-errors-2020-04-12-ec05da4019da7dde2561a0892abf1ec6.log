@@ -1,8 +1,0 @@
-2020-04-12T11:03:16+00:00 CRITICAL Uncaught Error: Call to undefined function get_permlink() in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\single-art_advisory.php:58
-Stack trace:
-#0 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-includes\template-loader.php(98): include()
-#1 C:\xampp\htdocs\2020\04\varvararoza.webflow\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\2020\04\varvararoza.webflow\index.php(17): require('C:\\xampp\\htdocs...')
-#3 {main}
-  thrown in C:\xampp\htdocs\2020\04\varvararoza.webflow\varvararoza-cn\themes\varvara\single-art_advisory.php on line 58
-

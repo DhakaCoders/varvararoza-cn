@@ -32,13 +32,19 @@ get_header();?>
 	  	  	  </div>
 	  	  	  <div class="art-article-gallery-wrp clearfix">
 	  	  	  	<div class="art-article-gallery-grid">
-	  	  	  	  <div class="art-article-gallery-img" style="background:url(<?php echo THEME_URI;?>/img/art-article-gallery-img-1.png);"></div>
+	  	  	  	  <div class="art-article-gallery-img" style="background:url(<?php echo THEME_URI;?>/img/art-article-gallery-img-1.png);">
+	  	  	  	  	<a href="#" class="overlay-link"></a>
+	  	  	  	  </div>
 	  	  	  	</div>
 	  	  	  	<div class="art-article-gallery-grid">
-	  	  	  	  <div class="art-article-gallery-img" style="background:url(<?php echo THEME_URI;?>/img/art-article-gallery-img-2.png);"></div>
+	  	  	  	  <div class="art-article-gallery-img" style="background:url(<?php echo THEME_URI;?>/img/art-article-gallery-img-2.png);">
+	  	  	  	  	<a href="#" class="overlay-link"></a>
+	  	  	  	  </div>
 	  	  	  	</div>
 	  	  	  	<div class="art-article-gallery-grid">
-	  	  	  	  <div class="art-article-gallery-img" style="background:url(<?php echo THEME_URI;?>/img/art-article-gallery-img-3.png);"></div>
+	  	  	  	  <div class="art-article-gallery-img" style="background:url(<?php echo THEME_URI;?>/img/art-article-gallery-img-3.png);">
+	  	  	  	  	<a href="#" class="overlay-link"></a>
+	  	  	  	  </div>
 	  	  	  	</div>
 	  	  	  </div>
 	  	  	  <div class="art-article-dsc">
