@@ -73,11 +73,27 @@ if ( post_password_required() ) {
 	?>
 </div>
 <?php
+$category = get_the_terms( get_the_ID(), 'product_cat' );
+$term_id = $termQuery = '';
+if($category && ! is_wp_error( $category )):
+  foreach($category as $cat){
+    $term_id = $cat->term_id;
+  }
+  $termQuery = array(
+    array(
+      'taxonomy' => 'product_cat',
+      'field' => 'term_id',
+      'terms' => $term_id
+    )
+  );
+endif;
+
 	$query = new WP_Query(array( 
 		'post_type'=> 'product',
 		'posts_per_page' => 4,
 		'orderby' => 'date',
 		'order' => 'desc',
+		'tax_query' => $termQuery,
 		) 
 	);	
 	?>
