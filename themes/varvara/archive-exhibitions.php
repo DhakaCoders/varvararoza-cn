@@ -112,7 +112,7 @@ get_header(); ?>
 	  	  	 	?>
 	  	  	 	<div class="ex-upcoming-slide-item">
 	  	  	 	  <div class="ex-upcoming-slide-two-part clearfix">
-	  	  	 	  	<div class="ex-upcoming-slide-two-lft order-2">
+	  	  	 	  	<div class="ex-upcoming-slide-two-lft order-2 mHc">
 	  	  	 	  	<?php if ( has_post_thumbnail($p->ID) ) { 
 	  	  	 	  		$attach_id = get_post_thumbnail_id($p->ID);
 	  	  	 	  		$exh_src = cbv_get_image_src($attach_id,'exhgrid');
@@ -126,7 +126,7 @@ get_header(); ?>
 					<?php } ?> 
 	  	  	 	  	  
 	  	  	 	  	</div>
-	  	  	 	  	<div class="ex-upcoming-slide-two-rgt order-1">
+	  	  	 	  	<div class="ex-upcoming-slide-two-rgt order-1 mHc">
 	  	  	 	  	   <div class="ex-upcoming-slide-two-dsc">
 	  	  	 	  	   	 <span>UPCOMING</span>
 	  	  	 	  	   	 <span><?php echo get_field('date_from', $p->ID); ?><?php if (get_field('date_to', $p->ID)) { ?> - <?php echo get_field('date_to', $p->ID); ?><?php } ?></span>

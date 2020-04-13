@@ -87,6 +87,8 @@ endif;
             if(!empty($thumb_id)){
                 $product_thumb = cbv_get_image_tag($thumb_id, 'prodgrid');
             }
+            $proinfo = get_field('productsec', get_the_ID());
+            $artistID = get_field('artist', get_the_ID());
             ?>
             <li class="product-list gallery-col">
 
@@ -97,8 +99,15 @@ endif;
             <div class="fl-product-grd-des">
                 <h5 class="fl-product-grd-title"><a href="<?php echo get_permalink( $product->get_id() ); ?>"><?php echo get_the_title(); ?></a></h5>
                 <div class="fl-taxo">
-                  <span class="fl-taxo1">Oil on Canvas</span>
-                  <span class="fl-taxo2">Artist name</span>
+                  <?php 
+                  if( !empty($proinfo['material']) ) printf('<span class="fl-taxo1">%s</span>', $proinfo['material']);
+                  if( !empty($artistID) ):
+                      $artist = get_post( $artistID );
+                      if( $artist ):
+                          printf('<span class="fl-taxo2">%s</span>', $artist->post_title);
+                      endif;
+                  endif;
+                ?>
                 </div>
             </div>
             <div class="wc-enquire">

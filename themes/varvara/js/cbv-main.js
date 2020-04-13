@@ -1,6 +1,8 @@
 (function($) {
 
-
+if($('.mHc').length){
+  $('.mHc').matchHeight();
+};
 
 	/*
 --------------------

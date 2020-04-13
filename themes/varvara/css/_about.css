@@ -618,7 +618,8 @@ footer.regular-footer .footer-list svg {
 
 
 footer.regular-footer .footer-list span a,
-.copyright {
+.copyright, 
+.upercase {
     text-transform: uppercase;
 }
 

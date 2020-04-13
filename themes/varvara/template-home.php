@@ -86,9 +86,7 @@ get_header(); ?>
 							if( $fblink && !empty($fblink) ): 
 							    ?>
 					       <span class="instagram-link">
-					    	<a href="<?php echo esc_url( $fblink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/ftr-facebook.png" alt="instagram icon"></a></span> 
-					    	<a href="<?php echo esc_url( $fblink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/facebook.svg" alt="instagram icon"></a></span> 
-					    	<a href="<?php echo esc_url( $fblink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/ftr-facebook.svg" alt="instagram icon"></a></span> 
+					    	<a href="<?php echo esc_url( $fblink ); ?>" target="_blank"><img class="style-svg" src="<?php bloginfo('template_directory'); ?>/img/facebook.svg" alt="facebook icon"></a></span> 
 							<?php endif; ?>
 							<?php 
 							$inslink = get_field('instagram_url', 'option');
@@ -106,7 +104,7 @@ get_header(); ?>
 							    $link_title = $link['title'];
 							    $link_target = $link['target'] ? $link['target'] : '_self';
 							    ?>
-							    <span><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></span>
+							    <span class="upercase"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></span>
 							<?php endif; ?>
 
 						</div>
@@ -120,7 +118,7 @@ get_header(); ?>
 							    $link_title = $link['title'];
 							    $link_target = $link['target'] ? $link['target'] : '_self';
 							    ?>
-							    <span><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></span> <span class="sep">|</span> 
+							    <span class="upercase"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></span> <span class="sep">|</span> 
 							<?php endif; ?>
 							<span class="copyright"><?php echo get_field('copyright_text', 'option'); ?></span>
 
