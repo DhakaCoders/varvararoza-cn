@@ -49,6 +49,13 @@ gtag('config', 'UA-148365752-1');
                     <?php } ?>
 
                 </a>
+
+                <div class="hdr-cart">
+                    <a href="#">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/cart-icon.svg">
+                        <span>12</span>
+                    </a>
+                </div>
                 
                 <div class="masthead__close" data-aos="fade-down">
                     <div class="masthead__close__img">

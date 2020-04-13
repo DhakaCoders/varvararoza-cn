@@ -612,6 +612,7 @@ footer.regular-footer .footer-list svg {
 	padding-right: 0;
 	padding-left: 20px;
 }
+footer.regular-footer .footer-list span a:hover,
 .btn:hover{
 	opacity: .8;
 }

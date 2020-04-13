@@ -34,3 +34,31 @@ body.privacy-policy .content-wrap h1{
 		font-size: 40px;
 	}
 }
+
+
+
+.hdr-cart{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+.hdr-cart a{
+	position: relative;
+}
+.hdr-cart a span {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100% 100%;
+}
