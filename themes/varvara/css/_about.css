@@ -618,7 +618,10 @@ footer.regular-footer .footer-list span a:hover,
 }
 
 
-
+footer.regular-footer .footer-list span a,
+.copyright {
+    text-transform: uppercase;
+}
 
 
 /*
